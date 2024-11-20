@@ -50,27 +50,17 @@
         #banner h1 {
             margin-bottom: 1rem;
         }
-        .whatsapp-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background: #25D366;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        .slogan {
+            background: #333; /* Fundo escuro */
+            text-align: center;
+            padding: 2rem 0;
         }
-        .whatsapp-button img {
-            margin-right: 10px;
-            width: 24px;
-            height: 24px;
-        }
-        .whatsapp-button:hover {
-            background: #1ebc59;
+        .slogan img {
+            display: block;
+            margin: 0 auto;
+            max-width: 70%; /* Largura máxima ajustada */
+            height: auto;
+            max-height: 400px; /* Altura máxima ajustada */
         }
         section {
             padding: 2rem;
@@ -91,11 +81,21 @@
             color: #fff;
             margin-top: 2rem;
         }
-        img.logo {
+        .whatsapp-button {
             display: block;
+            text-align: center;
             margin: 20px auto;
-            max-width: 600px; /* Tamanho maior do logotipo */
-            height: auto;
+            padding: 15px 30px;
+            background: #25D366;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .whatsapp-button:hover {
+            background: #1ebc59;
         }
     </style>
 </head>
@@ -124,11 +124,13 @@
         <h1>Seu Direito é a Nossa Prioridade</h1>
         <p>Especialistas em Previdenciário, Trabalhista e Civil.</p>
         <!-- Botão do WhatsApp -->
-        <a href="https://wa.me/556881198983" target="_blank" class="whatsapp-button">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            Fale Conosco no WhatsApp
-        </a>
+        <a href="https://wa.me/556881198983" target="_blank" class="whatsapp-button">Fale Conosco no WhatsApp</a>
     </section>
+
+    <!-- Slogan com imagem -->
+    <div class="slogan">
+        <img src="LOGOTIPO%20APROVADO_1.png" alt="Slogan">
+    </div>
 
     <section id="servicos">
         <h2>Previdência</h2>
@@ -139,10 +141,6 @@
             <li><strong>Atuação em Processos Judiciais:</strong> Revisões de benefícios e ações contra negativas do INSS.</li>
         </ul>
     </section>
-
-    <div class="logo">
-        <img src="LOGOTIPO%20APROVADO_1.png" alt="Logotipo">
-    </div>
 
     <section id="trabalhista">
         <h2>Direito Trabalhista</h2>
