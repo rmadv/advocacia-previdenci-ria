@@ -50,6 +50,15 @@
         #banner h1 {
             margin-bottom: 1rem;
         }
+        .logo {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+        }
         section {
             padding: 2rem;
             margin: 1rem;
@@ -69,13 +78,17 @@
             color: #fff;
             margin-top: 2rem;
         }
-        .whatsapp img {
-            width: 50px;
-            height: 50px;
-        }
-        .whatsapp p {
-            color: #25D366;
+        .whatsapp-button {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            background: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-decoration: none;
             font-weight: bold;
+            max-width: 300px;
         }
     </style>
 </head>
@@ -102,82 +115,31 @@
     <section id="banner">
         <h1>Seu Direito é a Nossa Prioridade</h1>
         <p>Especialistas em Previdenciário, Trabalhista e Civil.</p>
-        <div style="text-align: center; margin-top: 20px;">
-            <a href="https://wa.me/556881198983" target="_blank" style="background-color: #25D366; color: white; text-decoration: none; padding: 15px 30px; border-radius: 5px; font-weight: bold;">
-                Fale Conosco no WhatsApp
-            </a>
-        </div>
+        <a href="https://wa.me/556881198983" class="whatsapp-button" target="_blank">Fale Conosco no WhatsApp</a>
     </section>
 
+    <div class="logo">
+        <img src="LOGOTIPO%20APROVADO_1.png" alt="Logotipo">
+    </div>
+
     <section id="servicos">
-        <div style="text-align: center; margin: 20px 0;">
-            <img src="LOGOTIPO%20APROVADO_1.png" alt="Logotipo" style="max-width: 100%; height: auto; width: 500px;">
-        </div>
         <h2>Principais Atividades</h2>
         <ul>
-            <li><a href="#orientacao" style="text-decoration: none; color: #004080;">Orientação e Consultoria:</a> Esclarecimento de direitos, planejamento de aposentadorias e análise de benefícios.</li>
-            <li><a href="#requerimento" style="text-decoration: none; color: #004080;">Requerimento de Benefícios:</a> Assistência no pedido de aposentadorias, benefício por incapacidade temporária (auxílio-doença), pensão por morte, entre outros.</li>
-            <li><a href="#defesa-admin" style="text-decoration: none; color: #004080;">Defesa em Processos Administrativos:</a> Recursos contra decisões do INSS e correção de erros.</li>
-            <li><a href="#atuacao-judicial" style="text-decoration: none; color: #004080;">Atuação em Processos Judiciais:</a> Ações contra negativas do INSS e revisão de benefícios.</li>
-            <li><a href="#regularizacao" style="text-decoration: none; color: #004080;">Regularização de Contribuições:</a> Auxílio a autônomos e segurados especiais na regularização.</li>
-            <li><a href="#defesa-direitos" style="text-decoration: none; color: #004080;">Defesa de Direitos Específicos:</a> Proteger direitos de trabalhadores insalubres e segurados especiais.</li>
+            <li><strong>Orientação e Consultoria:</strong> Esclarecimento de direitos, planejamento de aposentadorias e análise de benefícios.</li>
+            <li><strong>Requerimento de Benefícios:</strong> Assistência no pedido de aposentadorias, benefício por incapacidade temporária (auxílio-doença), pensão por morte, entre outros.</li>
+            <li><strong>Defesa em Processos Administrativos:</strong> Recursos contra decisões do INSS e correção de erros.</li>
+            <li><strong>Atuação em Processos Judiciais:</strong> Ações contra negativas do INSS e revisão de benefícios.</li>
+            <li><strong>Regularização de Contribuições:</strong> Auxílio a autônomos e segurados especiais na regularização.</li>
+            <li><strong>Defesa de Direitos Específicos:</strong> Proteger direitos de trabalhadores insalubres e segurados especiais.</li>
         </ul>
     </section>
 
-    <!-- Seções detalhadas -->
-    <section id="orientacao">
-        <h3>Orientação e Consultoria</h3>
-        <p>Oferecemos esclarecimento sobre os direitos previdenciários, análise detalhada de benefícios disponíveis e planejamento estratégico para aposentadorias. Nosso objetivo é simplificar o entendimento das opções e orientar na tomada de decisões que garantam o melhor resultado para o cliente.</p>
-    </section>
-
-    <section id="requerimento">
-        <h3>Requerimento de Benefícios</h3>
-        <p>Prestamos assistência completa no pedido de benefícios previdenciários, incluindo aposentadorias, auxílio-doença, pensão por morte e outros. Garantimos que toda a documentação esteja correta e ajudamos a enfrentar a burocracia do INSS.</p>
-    </section>
-
-    <section id="defesa-admin">
-        <h3>Defesa em Processos Administrativos</h3>
-        <p>Defendemos nossos clientes em recursos administrativos contra decisões negativas do INSS, buscando a correção de erros e garantindo que seus direitos sejam plenamente respeitados.</p>
-    </section>
-
-    <section id="atuacao-judicial">
-        <h3>Atuação em Processos Judiciais</h3>
-        <p>Quando necessário, representamos nossos clientes em ações judiciais contra negativas do INSS, além de realizar revisões de benefícios para corrigir valores ou ampliar vantagens concedidas.</p>
-    </section>
-
-    <section id="regularizacao">
-        <h3>Regularização de Contribuições</h3>
-        <p>Ajudamos autônomos e segurados especiais a regularizarem suas contribuições junto à Previdência Social, garantindo que estejam em dia com suas obrigações e aptos a solicitar benefícios quando necessário.</p>
-    </section>
-
-    <section id="defesa-direitos">
-        <h3>Defesa de Direitos Específicos</h3>
-        <p>Trabalhamos na proteção de direitos de trabalhadores em condições insalubres e segurados especiais, como pescadores e trabalhadores rurais, assegurando que tenham acesso aos benefícios previdenciários a que têm direito.</p>
-    </section>
-
-    <!-- Seção de Advogados -->
     <section id="advogados">
         <h2>Nossos Advogados</h2>
         <ul>
-            <li><strong>Dra. Rosa Maria da Silva Nascimento</strong> - OAB/AC 4165</li>
-            <li><strong>Dr. Ítalo da Silva Nascimento</strong> - OAB/AC 6266</li>
+            <li><strong>Dra. Rosa Maria da Silva Nascimento</strong> - OAB/AC 4165<br>Especialista em Direito Previdenciário.</li>
+            <li><strong>Dr. Ítalo da Silva Nascimento</strong> - OAB/AC 6266<br>Especialista em Direito Trabalhista e Civil.</li>
         </ul>
-    </section>
-
-    <section id="contato">
-        <h2>Contato</h2>
-        <p>Fale conosco para mais informações:</p>
-        <ul>
-            <li><strong>Email:</strong> rminadvocacia@gmail.com</li>
-            <li><strong>Telefone:</strong> (68) 8119-8983</li>
-            <li><strong>Endereço:</strong> Rua Delfim Neto, 47, Rio Branco - AC</li>
-        </ul>
-        <div class="whatsapp">
-            <a href="https://wa.me/556881198983" target="_blank" style="text-decoration: none;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-                <p>Fale Conosco no WhatsApp</p>
-            </a>
-        </div>
     </section>
 
     <footer>
@@ -185,5 +147,6 @@
     </footer>
 </body>
 </html>
+
 
 
