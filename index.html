@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advocacia Previdenciária</title>
+    <title>Advocacia Especializada</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -50,14 +50,27 @@
         #banner h1 {
             margin-bottom: 1rem;
         }
-        .logo {
-            text-align: center;
-            margin: 20px 0;
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #25D366;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
-        .logo img {
-            max-width: 100%;
-            height: auto;
-            max-height: 200px;
+        .whatsapp-button img {
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+        }
+        .whatsapp-button:hover {
+            background: #1ebc59;
         }
         section {
             padding: 2rem;
@@ -78,42 +91,29 @@
             color: #fff;
             margin-top: 2rem;
         }
-        .whatsapp img {
-            width: 50px;
-            height: 50px;
-        }
-        .whatsapp p {
-            color: #25D366;
-            font-weight: bold;
-        }
-        .whatsapp-button {
+        img.logo {
             display: block;
-            text-align: center;
             margin: 20px auto;
-            background: #25D366;
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            max-width: 300px;
+            max-width: 600px; /* Tamanho maior do logotipo */
+            height: auto;
         }
     </style>
 </head>
 <body>
     <header>
         <div>
-            <h1>Advocacia Previdenciária</h1>
+            <h1>Advocacia Especializada</h1>
             <div style="text-align: right;">
                 <p style="margin: 0;"><strong>Email:</strong> rminadvocacia@gmail.com</p>
                 <p style="margin: 0;"><strong>Telefone:</strong> (68) 8119-8983</p>
-                <p style="margin: 0;"><a href="https://wa.me/556881198983" target="_blank" style="color: #fff; text-decoration: none; font-weight: bold;">WhatsApp</a></p>
             </div>
         </div>
         <nav>
             <ul>
                 <li><a href="#inicio">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#servicos">Previdência</a></li>
+                <li><a href="#trabalhista">Trabalhista</a></li>
+                <li><a href="#civil">Civil</a></li>
                 <li><a href="#advogados">Advogados</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -122,19 +122,21 @@
     
     <section id="banner">
         <h1>Seu Direito é a Nossa Prioridade</h1>
-        <p>Orientação estratégica para garantir seus direitos.</p>
-        <a href="https://wa.me/556881198983" class="whatsapp-button" target="_blank">Fale Conosco no WhatsApp</a>
+        <p>Especialistas em Previdenciário, Trabalhista e Civil.</p>
+        <!-- Botão do WhatsApp -->
+        <a href="https://wa.me/556881198983" target="_blank" class="whatsapp-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            Fale Conosco no WhatsApp
+        </a>
     </section>
 
     <section id="servicos">
-        <h2>Principais Atividades</h2>
+        <h2>Previdência</h2>
         <ul>
-            <li><strong>Orientação e Consultoria:</strong> Esclarecimento de direitos, planejamento de aposentadorias e análise de benefícios.</li>
-            <li><strong>Requerimento de Benefícios:</strong> Assistência no pedido de aposentadorias, benefício por incapacidade temporária (auxílio-doença), pensão por morte, entre outros.</li>
-            <li><strong>Defesa em Processos Administrativos:</strong> Recursos contra decisões do INSS e correção de erros.</li>
-            <li><strong>Atuação em Processos Judiciais:</strong> Ações contra negativas do INSS e revisão de benefícios.</li>
-            <li><strong>Regularização de Contribuições:</strong> Auxílio a autônomos e segurados especiais na regularização.</li>
-            <li><strong>Defesa de Direitos Específicos:</strong> Proteger direitos de trabalhadores insalubres e segurados especiais.</li>
+            <li><strong>Orientação e Consultoria:</strong> Planejamento estratégico e análise de benefícios previdenciários.</li>
+            <li><strong>Requerimento de Benefícios:</strong> Assistência no pedido de aposentadorias, benefício por incapacidade temporária(auxílio-doença), pensão por morte, entre outros.</li>
+            <li><strong>Defesa em Processos Administrativos:</strong> Recursos contra decisões negativas do INSS e correção de erros.</li>
+            <li><strong>Atuação em Processos Judiciais:</strong> Revisões de benefícios e ações contra negativas do INSS.</li>
         </ul>
     </section>
 
@@ -142,19 +144,36 @@
         <img src="LOGOTIPO%20APROVADO_1.png" alt="Logotipo">
     </div>
 
+    <section id="trabalhista">
+        <h2>Direito Trabalhista</h2>
+        <ul>
+            <li><strong>Rescisões Trabalhistas:</strong> Garantimos todos os direitos do trabalhador na rescisão.</li>
+            <li><strong>Estabilidade no Trabalho:</strong> Defendemos os direitos de trabalhadores com estabilidade.</li>
+            <li><strong>Verbas Rescisórias:</strong> Cálculo e garantia de recebimento correto das verbas rescisórias.</li>
+        </ul>
+    </section>
+
+    <section id="civil">
+        <h2>Direito Civil</h2>
+        <ul>
+            <li><strong>Contratos:</strong> Elaboração e revisão de contratos diversos.</li>
+            <li><strong>Danos Morais:</strong> Reparação por danos morais e materiais.</li>
+            <li><strong>Direito do Consumidor:</strong> Defesa de consumidores contra práticas abusivas.</li>
+        </ul>
+    </section>
+
     <section id="advogados">
         <h2>Nossos Advogados</h2>
         <ul>
-            <li><strong>Dra. Rosa Maria da Silva Nascimento</strong> - OAB/AC 4165<br>Especialista em Direito Previdenciário.</li>
-            <li><strong>Dr. Ítalo da Silva Nascimento</strong> - OAB/AC 6266<br>Especialista em Direito Trabalhista e Civil.</li>
+            <li><strong>Dra. Rosa Maria da Silva Nascimento:</strong> Especialista em Direito Previdenciário - OAB/AC 4165</li>
+            <li><strong>Dr. Ítalo da Silva Nascimento:</strong> Especialista em Direito Civil e Trabalhista - OAB/AC 6266</li>
         </ul>
     </section>
 
     <footer>
-        <p>&copy; 2024 Advocacia Previdenciária - Todos os Direitos Reservados</p>
+        <p>&copy; 2024 Advocacia Especializada - Todos os Direitos Reservados</p>
     </footer>
 </body>
 </html>
-
 
 
