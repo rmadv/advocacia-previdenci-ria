@@ -73,61 +73,33 @@
         #banner h1 {
             margin-bottom: 1rem;
         }
-        .slogan {
-            background: #e6f7ff;
-            color: #004080;
-            text-align: center;
-            padding: 1rem;
-            border-radius: 10px;
-            margin: 1rem auto;
-            max-width: 600px;
-            font-size: 1.5rem;
-            font-style: italic;
-            font-weight: bold;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        section {
-            padding: 2rem;
-            margin: 1rem;
-            border-radius: 5px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        #servicos {
-            background: #e6f7ff;
-        }
-        #trabalhista {
-            background: #fff4e6;
-        }
-        #civil {
-            background: #f5f5f5;
-        }
-        section h2 {
-            color: #FF7F00;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #FF7F00;
-            color: #fff;
-            margin-top: 2rem;
+
+        /* Adicionado: Estilos para botão e ícone do WhatsApp */
+        .whatsapp-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
         }
         .whatsapp-button {
-            display: block;
-            text-align: center;
-            margin: 20px auto;
-            padding: 15px 30px;
+            display: inline-block;
+            padding: 10px 20px;
             background: #25D366;
             color: #fff;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             text-decoration: none;
             border-radius: 5px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            margin-right: 10px;
+            white-space: nowrap;
         }
         .whatsapp-button:hover {
             background: #1ebc59;
+        }
+        .whatsapp-icon {
+            width: 40px;
+            height: 40px;
         }
     </style>
 </head>
@@ -156,7 +128,14 @@
     <section id="banner">
         <h1>Especialistas em Benefícios e Aposentadorias do INSS no Acre</h1>
         <p>Garantimos seus direitos previdenciários, trabalhistas e civis com excelência. Atendimento rápido em Rio Branco e todo o Acre.</p>
-        <a href="https://wa.me/5568999201818" target="_blank" class="whatsapp-button">Agende uma Consulta Agora</a>
+        
+        <!-- Alterado: Substituído botão original por novo layout com ícone -->
+        <div class="whatsapp-section">
+            <a href="https://wa.me/5568999201818" target="_blank" class="whatsapp-button">Agende uma Consulta Agora</a>
+            <a href="https://wa.me/5568999201818" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+            </a>
+        </div>
     </section>
 
     <div class="slogan">
