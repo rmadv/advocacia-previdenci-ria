@@ -8,55 +8,92 @@ blog/index.html
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
             background-color: #F5F5F5;
         }
         header {
-            background: #FF7F00;
+            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
             color: #fff;
-            padding: 1rem 0;
             text-align: center;
-            border-bottom: 5px solid #333333;
+            padding: 2rem;
         }
         header h1 {
-            margin: 0;
-            font-size: 2rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        nav {
+            background: #FF7F00;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         main {
             padding: 2rem;
-            text-align: center;
-            background-color: #fff;
-            margin: 1rem auto;
-            max-width: 800px;
-            border-radius: 5px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .questions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-between;
+        }
+        .card {
+            flex: 1;
+            min-width: 250px;
+            background: #fff;
+            border: 2px solid #FF7F00;
+            border-radius: 10px;
+            padding: 15px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
-        main p {
-            font-size: 1.2rem;
-            color: #333333;
-            margin-bottom: 1rem;
+        .card h3 {
+            color: #004080;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-style: italic;
+            color: #333;
         }
         footer {
-            background: #FF7F00;
+            background: linear-gradient(to right, #FF7F00, #004080);
             color: #fff;
             text-align: center;
             padding: 1rem;
             margin-top: 2rem;
-            border-top: 5px solid #333333;
         }
-        footer p {
-            margin: 0;
-            font-size: 1rem;
+        .button-group {
+            text-align: center;
+            margin: 20px 0;
         }
-        a {
-            color: #004080;
+        .button-group a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            background: #004080;
+            color: #fff;
             text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
         }
-        a:hover {
-            text-decoration: underline;
+        .button-group a:hover {
+            background: #002a5c;
+        }
+        .button-group img {
+            vertical-align: middle;
+            margin-left: 10px;
         }
     </style>
 </head>
@@ -64,40 +101,41 @@ blog/index.html
     <header>
         <h1>Bem-vindo ao Blog da Advocacia Previdenciária</h1>
     </header>
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#perguntas">Perguntas e Respostas</a>
+        <a href="#contato">Contato</a>
+        <a href="https://www.prevadv.com.br">Site Principal</a>
+    </nav>
     <main>
-       <main>
-    <h2 style="text-align: center; color: #FF7F00;">Perguntas e Respostas</h2>
-
-    <div style="border: 1px solid #FF7F00; border-radius: 10px; padding: 15px; margin: 10px 0; background-color: #fff;">
-        <p><strong>O que fazer quando o INSS nega meu benefício?</strong></p>
-        <p style="font-style: italic;">Primeiramente, é importante não desanimar. Quando o INSS nega um benefício, você tem duas opções principais: entrar com um recurso administrativo ou procurar a via judicial. Um advogado especialista pode ajudar a identificar qual é a melhor solução para o seu caso.</p>
-    </div>
-
-    <div style="border: 1px solid #FF7F00; border-radius: 10px; padding: 15px; margin: 10px 0; background-color: #fff;">
-        <p><strong>Como sei se estou cumprindo os requisitos para me aposentar?</strong></p>
-        <p style="font-style: italic;">É fundamental fazer uma análise detalhada do seu tempo de contribuição e idade. Você pode verificar essas informações no seu extrato CNIS, acessando o portal Meu INSS. Caso encontre inconsistências, procure um especialista para corrigir os dados.</p>
-    </div>
-
-    <div style="border: 1px solid #FF7F00; border-radius: 10px; padding: 15px; margin: 10px 0; background-color: #fff;">
-        <p><strong>O que é necessário para solicitar o benefício de auxílio-doença?</strong></p>
-        <p style="font-style: italic;">Para solicitar o auxílio-doença, você precisa apresentar atestados e laudos médicos que comprovem a sua incapacidade temporária para o trabalho. É importante também realizar o agendamento da perícia médica pelo site ou aplicativo Meu INSS.</p>
-    </div>
-
-    <div style="border: 1px solid #FF7F00; border-radius: 10px; padding: 15px; margin: 10px 0; background-color: #fff;">
-        <p><strong>Como funciona a revisão de benefício?</strong></p>
-        <p style="font-style: italic;">A revisão de benefício é o processo em que se analisa se o INSS calculou corretamente o valor ou se reconheceu todos os períodos de contribuição. Um advogado pode verificar se há inconsistências e entrar com um pedido de revisão.</p>
-    </div>
-
-    <p style="text-align: center; margin-top: 20px;">
-        <a href="https://www.prevadv.com.br" style="color: #004080; text-decoration: none; font-weight: bold;">Voltar para o site principal</a>
-    </p>
-</main>
-
+        <section id="perguntas">
+            <h2 style="text-align: center; color: #FF7F00;">Perguntas e Respostas</h2>
+            <div class="questions">
+                <div class="card">
+                    <h3>🟡 Dra. Rosa, o que fazer quando o INSS nega meu benefício?</h3>
+                    <p>🟢 Primeiramente, é importante não desanimar. Você pode entrar com um recurso administrativo ou judicial, dependendo do caso.</p>
+                </div>
+                <div class="card">
+                    <h3>🟡 Como funciona o cálculo de aposentadoria?</h3>
+                    <p>🟢 O cálculo depende da média salarial e do tempo de contribuição. Cada caso é analisado individualmente.</p>
+                </div>
+                <div class="card">
+                    <h3>🟡 Quem pode solicitar pensão por morte?</h3>
+                    <p>🟢 Dependentes do segurado falecido, como cônjuge, filhos menores de idade ou inválidos, têm direito ao benefício.</p>
+                </div>
+            </div>
+        </section>
+        <div class="button-group">
+            <a href="https://wa.me/5568999201818" target="_blank">Fale com Dra. Rosa
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20">
+            </a>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Advocacia Previdenciária, Trabalhista e Civil</p>
     </footer>
 </body>
 </html>
+
 
 
