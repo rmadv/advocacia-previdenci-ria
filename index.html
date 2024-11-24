@@ -8,6 +8,25 @@
     <meta name="keywords" content="advogado INSS Acre, benefícios INSS Rio Branco, aposentadoria INSS Acre, direito previdenciário Acre">
     <meta name="author" content="Advocacia Previdenciária, Trabalhista e Civil">
     <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Advocacia Previdenciária, Trabalhista e Civil",
+        "description": "Especialistas em benefícios do INSS, aposentadorias e direitos trabalhistas no Acre.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Delfim Neto, nº 47, Bairro Bosque",
+            "addressLocality": "Rio Branco",
+            "addressRegion": "AC",
+            "postalCode": "69901-360",
+            "addressCountry": "BR"
+        },
+        "telephone": "+5568999201818",
+        "email": "rminadvocacia@gmail.com",
+        "url": "https://www.prevadv.com.br"
+    }
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,64 +38,73 @@
         header {
             background: #FF7F00;
             color: #fff;
-            text-align: center;
-            padding: 2rem;
-            border-bottom: 5px solid #333333;
+            padding: 1rem 0;
+            border: 5px solid #333333;
+            border-radius: 10px;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin: 0.5rem 0;
-        }
-        .cta-button {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            color: #fff;
-            background: #004080;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .cta-button:hover {
-            background: #002a5c;
-        }
-        .whatsapp-section {
+        header div {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            margin-top: 1rem;
+            padding: 0 2rem;
         }
-        .whatsapp-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #25D366;
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 1rem 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
             color: #fff;
-            font-size: 16px;
-            font-weight: bold;
             text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-            margin-right: 10px;
-            white-space: nowrap;
+            font-weight: bold;
         }
-        .whatsapp-button:hover {
-            background: #1ebc59;
+        #banner {
+            background: #004080;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-radius: 10px;
         }
-        .whatsapp-icon {
-            width: 40px;
-            height: 40px;
+        #banner h1 {
+            margin-bottom: 1rem;
+        }
+        .slogan {
+            background: #e6f7ff;
+            color: #004080;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem auto;
+            max-width: 600px;
+            font-size: 1.5rem;
+            font-style: italic;
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
         section {
             padding: 2rem;
             margin: 1rem;
             border-radius: 5px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        #servicos {
+            background: #e6f7ff;
+        }
+        #trabalhista {
+            background: #fff4e6;
+        }
+        #civil {
+            background: #f5f5f5;
+        }
+        section h2 {
+            color: #FF7F00;
+            text-align: center;
+            margin-bottom: 1rem;
         }
         footer {
             text-align: center;
@@ -85,97 +113,58 @@
             color: #fff;
             margin-top: 2rem;
         }
-        .depoimentos {
-            background: #f5f5f5;
-            padding: 2rem;
-            text-align: center;
-            margin-top: 2rem;
-        }
-        .depoimento {
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-        .depoimento strong {
+        .whatsapp-button {
             display: block;
-            margin-top: 0.5rem;
-            color: #004080;
+            text-align: center;
+            margin: 20px auto;
+            padding: 15px 30px;
+            background: #25D366;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .whatsapp-button:hover {
+            background: #1ebc59;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Defendemos Seus Direitos Previdenciários!</h1>
-        <p>Rápido, eficiente e especializado. Atuamos para assegurar legalmente seus benefícios do INSS no Acre.</p>
-        <a href="#contato" class="cta-button">CONSULTA GRATUITA NA ÁREA DE PREVIDÊNCIA</a>
-        <div class="whatsapp-section">
-            <a href="https://wa.me/5568999201818" target="_blank" class="whatsapp-button">Agende uma Consulta Agora</a>
-            <a href="https://wa.me/5568999201818" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
-            </a>
+        <div>
+            <h1>Advocacia Previdenciária, Trabalhista e Civil</h1>
+            <div style="text-align: right;">
+                <p style="margin: 0;"><strong>Email:</strong> rminadvocacia@gmail.com</p>
+                <p style="margin: 0;"><strong>Telefone:</strong> (68) 99920-1818</p>
+                <p style="margin: 0;"><strong>Endereço:</strong> Rua Delfim Neto, nº 47, Bairro Bosque, Rio Branco-AC</p>
+            </div>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Previdência</a></li>
+                <li><a href="#trabalhista">Trabalhista</a></li>
+                <li><a href="#civil">Civil</a></li>
+                <li><a href="#advogados">Advogados</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <section>
-        <h2 style="text-align: center; color: #FF7F00;">Por que escolher nossos serviços?</h2>
-        <div class="benefits">
-            <div class="benefit">
-                <h2>Confiança</h2>
-                <p>95% de sucesso nos casos atendidos.</p>
-            </div>
-            <div class="benefit">
-                <h2>Agilidade</h2>
-                <p>Atuamos com agilidade em nossos serviços.</p>
-            </div>
-            <div class="benefit">
-                <h2>Especialização</h2>
-                <p>Focamos em direito previdenciário.</p>
-            </div>
-        </div>
+    
+    <section id="banner">
+        <h1>Especialistas em Benefícios e Aposentadorias do INSS no Acre</h1>
+        <p>Garantimos seus direitos previdenciários, trabalhistas e civis com excelência. Atendimento rápido em Rio Branco e todo o Acre.</p>
+        <a href="https://wa.me/5568999201818" target="_blank" class="whatsapp-button">Agende uma Consulta Agora</a>
     </section>
 
-    <section id="servicos">
-        <h2>Advogado Previdenciário Especialista em INSS no Acre</h2>
-        <ul>
-            <li><strong>Orientação e Consultoria:</strong> Planejamento estratégico e análise de benefícios previdenciários.</li>
-            <li><strong>Requerimento de Benefícios:</strong> Assistência no pedido de aposentadorias, salário maternidade, benefício por incapacidade temporária (auxílio-doença), pensão por morte, entre outros.</li>
-            <li><strong>Defesa em Processos Administrativos:</strong> Recursos contra decisões negativas do INSS e correção de CNIS.</li>
-            <li><strong>Atuação em Processos Judiciais:</strong> Revisões de benefícios e ações contra negativas do INSS.</li>
-        </ul>
-    </section>
+    <div class="slogan">
+        Garantindo seus direitos, simplificando sua jornada.
+    </div>
 
-    <section id="penal">
-        <h2>Direito Penal no Acre – Defesa Especializada</h2>
-        <ul>
-            <li><strong>Defesa Criminal:</strong> Representação em casos de acusação criminal.</li>
-            <li><strong>Assessoria Jurídica:</strong> Orientação em investigações e processos penais.</li>
-            <li><strong>Acompanhamento em Delegacias:</strong> Presença e orientação durante depoimentos e diligências na delegacia.</li>
-            <li><strong>Revisão Criminal:</strong> Análise de condenações e busca de revisão judicial.</li>
-            <li><strong>Medidas Protetivas:</strong> Acompanhamento em casos de violência doméstica ou familiar.</li>
-        </ul>
-        <p style="text-align: center; margin-top: 1rem; font-weight: bold; color: #004080;">
-            Responsável: Dr. Francisco José Benício Dias - OAB/AC 4284<br>
-            Telefone: (68) 9989-0477
-        </p>
+    <section id="depoimentos">
+        <h2>Depoimentos de Clientes</h2>
     </section>
-
-    <section class="depoimentos">
-        <h2 style="color: #FF7F00;">Depoimentos de Clientes</h2>
-        <div class="depoimento">
-            "Graças ao escritório, consegui minha aposentadoria rural depois de tantas dificuldades. Muito obrigada!"
-            <strong>- Maria de Souza</strong>
-        </div>
-        <div class="depoimento">
-            "Entrei com recurso contra o INSS com o apoio desta equipe, e deu tudo certo. Recomendo!"
-            <strong>- João Pereira</strong>
-        </div>
-        <div class="depoimento">
-            "Profissionais capacitados e atendimento humanizado. Resolveram meu caso com rapidez."
-            <strong>- Ana Lima</strong>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Advocacia Previdenciária, Trabalhista e Civil - Todos os Direitos Reservados</p>
-    </footer>
 </body>
 </html>
