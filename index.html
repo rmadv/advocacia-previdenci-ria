@@ -8,96 +8,42 @@
     <meta name="keywords" content="advogado INSS Acre, benefícios INSS Rio Branco, aposentadoria INSS Acre, direito previdenciário Acre">
     <meta name="author" content="Advocacia Previdenciária, Trabalhista, Civil e Criminalista">
     <meta name="robots" content="index, follow">
-    <style>
+   <style>
     body {
+        margin: 0;
         font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
+        background-color: #FFFFFF;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .top-branco {
         background-color: #FFFFFF; /* Branco */
-        color: #000000; /* Preto */
+        height: 50px; /* Altura do retângulo branco */
     }
-    header {
-        background-color: #4B0082; /* Roxo escuro */
-        color: #FFFFFF; /* Texto branco */
-        padding: 20px;
-        border-bottom: 8px solid #333333; /* Faixa preta/escura */
+    .linha-cinza {
+        background-color: #D3D3D3; /* Cinza claro */
+        height: 10px; /* Altura da linha cinza */
     }
-    nav {
-        background-color: #333333; /* Faixa escura/preta */
+    .faixa-preta {
+        background-color: #000000; /* Preto predominante */
+        flex-grow: 1; /* Preenche a maior parte */
+        display: flex;
+        justify-content: flex-start;
+    }
+    .lateral-roxa {
+        background-color: #4B0082; /* Roxo */
+        width: 50px; /* Largura do roxo lateral */
+    }
+    .faixa-roxa-final {
+        background-color: #4B0082; /* Roxo */
+        height: 10px; /* Faixa roxa estreita na base */
+    }
+    .conteudo {
         color: #FFFFFF;
-        padding: 10px 0;
-        text-align: center;
-    }
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    nav ul li {
-        display: inline;
-        margin: 0 15px;
-    }
-    nav ul li a {
-        color: #FFFFFF;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    #banner {
-        background-color: #4B0082; /* Fundo roxo */
-        color: #FFFFFF; /* Texto branco */
-        padding: 40px 20px;
-        text-align: center;
-        border-radius: 10px;
-    }
-    #banner h1 {
-        margin: 0;
-        font-size: 2rem;
-        font-weight: bold;
-    }
-    #banner p {
-        font-size: 1.2rem;
-        margin-top: 10px;
-    }
-    .cta-section {
-        background-color: #333333; /* Preto/escuro */
-        color: #FFFFFF; /* Texto branco */
-        padding: 20px;
-        text-align: center;
-    }
-    .cta-section a {
-        color: #FFFFFF; /* Texto branco */
-        text-decoration: none;
-        font-weight: bold;
-        padding: 10px 20px;
-        border: 2px solid #FFFFFF;
-        border-radius: 5px;
-        display: inline-block;
-        margin: 10px;
-    }
-    .cta-section a:hover {
-        background-color: #FFFFFF; /* Fundo branco */
-        color: #4B0082; /* Texto roxo */
-    }
-    section {
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 800px;
-        border-radius: 8px;
-        background-color: #F5F5F5; /* Cinza claro */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    section h2 {
-        color: #4B0082; /* Roxo */
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    footer {
-        background-color: #333333; /* Preto/escuro */
-        color: #FFFFFF; /* Branco */
-        text-align: center;
-        padding: 10px;
-        margin-top: 20px;
+        margin: 20px;
     }
         .depoimentos {
             background: #f5f5f5;
