@@ -13,7 +13,8 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            background-color: #FFFFFF;
+            background-color: #FFFFFF; /* Fundo branco padrão */
+            color: #000000; /* Texto preto por padrão */
         }
         .container {
             display: flex;
@@ -21,33 +22,43 @@
             align-items: stretch;
         }
         .top-branco {
-            background-color: #FFFFFF;
+            background-color: #FFFFFF; /* Branco no topo */
             height: 50px;
         }
         .linha-cinza {
-            background-color: #D3D3D3;
+            background-color: #D3D3D3; /* Linha cinza clara */
             height: 10px;
         }
         .faixa-preta {
-            background-color: #000000;
+            background-color: #000000; /* Preto predominante */
             flex-grow: 1;
             display: flex;
+            color: #FFFFFF; /* Texto branco */
         }
         .lateral-roxa {
-            background-color: #4B0082;
+            background-color: #4B0082; /* Roxo */
             width: 50px;
         }
         .conteudo {
             flex-grow: 1;
-            color: #FFFFFF;
+            color: #FFFFFF; /* Texto branco para o fundo preto */
             padding: 20px;
         }
-        .faixa-roxa-final {
-            background-color: #4B0082;
-            height: 10px;
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: #F5F5F5; /* Cinza claro para o fundo das seções */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #000000; /* Texto preto para fundos claros */
         }
-        header {
-            margin-bottom: 20px;
+        footer {
+            text-align: center;
+            background: #4B0082; /* Fundo roxo no rodapé */
+            color: #FFFFFF; /* Texto branco */
+            padding: 10px;
+            margin-top: 20px;
         }
         nav ul {
             list-style: none;
@@ -61,24 +72,12 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: #FFFFFF;
+            color: #FFFFFF; /* Branco no menu */
             text-decoration: none;
             font-weight: bold;
         }
-        section {
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 800px;
-            background: #F5F5F5;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            background: #4B0082;
-            color: #FFFFFF;
-            padding: 10px;
-            margin-top: 20px;
+        nav ul li a:hover {
+            color: #FFD700; /* Destaque dourado ao passar o mouse */
         }
     </style>
 </head>
@@ -117,13 +116,6 @@
                     <p>Atuamos com dedicação para assegurar seus direitos previdenciários, trabalhistas, civis e, também, oferecer defesa especializada na área criminal sempre com excelência. Atendimento rápido em Rio Branco e todo o Acre.</p>
                 </section>
 
-                <div class="cta-section">
-                    <a href="#contato">FAÇA SUA CONSULTA NA ÁREA DA PREVIDÊNCIA</a>
-                    <a href="https://wa.me/5568999201818" target="_blank">Agende uma Consulta com a Dra. Rosa Agora
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20">
-                    </a>
-                </div>
-
                 <section id="servicos">
                     <h2>Advogado Previdenciário Especialista em INSS no Acre</h2>
                     <ul>
@@ -145,15 +137,6 @@
                     </ul>
                 </section>
 
-                <section id="contato">
-                    <h2>Contato</h2>
-                    <ul>
-                        <li><strong>Email:</strong> rminadvocacia@gmail.com</li>
-                        <li><strong>Telefone:</strong> (68) 99920-1818</li>
-                        <li><strong>Endereço:</strong> Rua Delfim Neto, nº 47, Bairro Bosque, Rio Branco-AC</li>
-                    </ul>
-                </section>
-
                 <footer>
                     <p>&copy; 2024 Advocacia Previdenciária, Trabalhista e Civil - Todos os Direitos Reservados</p>
                 </footer>
@@ -163,6 +146,7 @@
     </div>
 </body>
 </html>
+
 
    
     
