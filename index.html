@@ -12,59 +12,26 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
             background-color: #FFFFFF; /* Fundo branco padrão */
             color: #000000; /* Texto preto por padrão */
         }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-        }
-        .top-branco {
-            background-color: #FFFFFF; /* Branco no topo */
-            height: 50px;
-        }
-        .linha-cinza {
-            background-color: #D3D3D3; /* Linha cinza clara */
-            height: 10px;
-        }
-        .faixa-preta {
-            background-color: #000000; /* Preto predominante */
-            flex-grow: 1;
-            display: flex;
+        header {
+            background-color: #4B0082; /* Roxo no cabeçalho */
             color: #FFFFFF; /* Texto branco */
+            padding: 1rem 2rem;
         }
-        .lateral-roxa {
-            background-color: #4B0082; /* Roxo */
-            width: 50px;
+        header h1 {
+            font-size: 1.8rem;
         }
-        .conteudo {
-            flex-grow: 1;
-            color: #FFFFFF; /* Texto branco para o fundo preto */
-            padding: 20px;
-        }
-        section {
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 800px;
-            background: #F5F5F5; /* Cinza claro para o fundo das seções */
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            color: #000000; /* Texto preto para fundos claros */
-        }
-        footer {
-            text-align: center;
-            background: #4B0082; /* Fundo roxo no rodapé */
-            color: #FFFFFF; /* Texto branco */
-            padding: 10px;
-            margin-top: 20px;
+        header div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         nav ul {
             list-style: none;
             padding: 0;
             text-align: center;
-            margin: 1rem 0;
             display: flex;
             justify-content: center;
         }
@@ -72,90 +39,109 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: #FFFFFF; /* Branco no menu */
+            color: #FFFFFF; /* Links brancos no menu */
             text-decoration: none;
             font-weight: bold;
         }
         nav ul li a:hover {
             color: #FFD700; /* Destaque dourado ao passar o mouse */
         }
-        .cta-section a {
+        #banner {
+            background: #000000; /* Fundo preto do banner */
             color: #FFFFFF;
+            text-align: center;
+            padding: 2rem;
+        }
+        .cta-section a {
+            color: #FFFFFF; /* Texto branco nos botões */
             text-decoration: none;
             font-weight: bold;
             display: inline-block;
             padding: 10px 20px;
-            background: #4B0082; /* Roxo */
+            background: #4B0082; /* Roxo no botão */
             border: 2px solid #FFFFFF; /* Borda branca */
             border-radius: 5px;
             margin: 10px;
         }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: #F5F5F5; /* Cinza claro */
+            border-radius: 5px;
+            color: #000000; /* Texto preto */
+        }
+        footer {
+            text-align: center;
+            background: #4B0082; /* Roxo no rodapé */
+            color: #FFFFFF;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="top-branco"></div>
-        <div class="linha-cinza"></div>
-        <div class="faixa-preta">
-            <div class="lateral-roxa"></div>
-            <div class="conteudo">
-                <header>
-                    <div>
-                        <h1>Advocacia Previdenciária, Trabalhista, Civil e Criminalista</h1>
-                        <div style="text-align: right;">
-                            <p style="margin: 0;"><strong>Email:</strong> rminadvocacia@gmail.com</p>
-                            <p style="margin: 0;"><strong>Telefone:</strong> (68) 99920-1818</p>
-                            <p style="margin: 0;"><strong>Endereço:</strong> Rua Delfim Neto, nº 47, Bairro Bosque, Rio Branco-AC</p>
-                        </div>
-                    </div>
-                    <nav>
-                        <ul>
-                            <li><a href="#inicio">Início</a></li>
-                            <li><a href="#servicos">Previdência</a></li>
-                            <li><a href="#trabalhista">Trabalhista</a></li>
-                            <li><a href="#civil">Civil</a></li>
-                            <li><a href="#penal">Penal</a></li>
-                            <li><a href="#advogados">Advogados</a></li>
-                            <li><a href="#contato">Contato</a></li>
-                            <li><a href="/blog/">Blog</a></li>
-                        </ul>
-                    </nav>
-                </header>
-
-                <section id="banner">
-                    <h1>Especialistas em Benefícios e Aposentadorias do INSS no Acre</h1>
-                    <p>Atuamos com dedicação para assegurar seus direitos previdenciários, trabalhistas, civis e, também, oferecer defesa especializada na área criminal sempre com excelência. Atendimento rápido em Rio Branco e todo o Acre.</p>
-                </section>
-
-                <div class="cta-section">
-                    <a href="#contato">FAÇA SUA CONSULTA NA ÁREA DA PREVIDÊNCIA</a>
-                    <a href="https://wa.me/5568999201818" target="_blank">Agende uma Consulta com a Dra. Rosa Agora
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20">
-                    </a>
-                </div>
-
-                <section id="contato">
-                    <h2>Contato</h2>
-                    <ul>
-                        <li><strong>Email:</strong> rminadvocacia@gmail.com</li>
-                        <li><strong>Telefone 1:</strong> (68) 99920-1818</li>
-                        <li><strong>Telefone 2:</strong> (68) 9989-0477</li>
-                        <li><strong>Endereço 1:</strong> Rua Delfim Neto, nº 47, Bairro Bosque, Rio Branco-AC</li>
-                        <li><strong>Endereço 2:</strong> Rua Nova, nº 82, Bairro Estação Experimental, Rio Branco-AC</li>
-                    </ul>
-                    <div style="text-align: center;">
-                        <a href="https://wa.me/5568999201818" target="_blank" style="display: inline-block; padding: 10px 20px; background: #25D366; color: #fff; text-decoration: none; border-radius: 5px;">Converse com a Dra. Rosa pelo WhatsApp</a>
-                        <a href="https://wa.me/5568999194076" target="_blank" style="display: inline-block; padding: 10px 20px; background: #25D366; color: #fff; text-decoration: none; border-radius: 5px;">Converse com o Dr. Ítalo pelo WhatsApp</a>
-                    </div>
-                </section>
-
-                <footer>
-                    <p>&copy; 2024 Advocacia Previdenciária, Trabalhista e Civil - Todos os Direitos Reservados</p>
-                </footer>
+    <header>
+        <div>
+            <h1>Advocacia Previdenciária, Trabalhista, Civil e Criminalista</h1>
+            <div style="text-align: right;">
+                <p><strong>Email:</strong> rminadvocacia@gmail.com</p>
+                <p><strong>Telefone:</strong> (68) 99920-1818</p>
+                <p><strong>Endereço:</strong> Rua Delfim Neto, nº 47, Bairro Bosque, Rio Branco-AC</p>
             </div>
         </div>
-        <div class="faixa-roxa-final"></div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Previdência</a></li>
+                <li><a href="#trabalhista">Trabalhista</a></li>
+                <li><a href="#civil">Civil</a></li>
+                <li><a href="#penal">Penal</a></li>
+                <li><a href="#advogados">Advogados</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="/blog/">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="banner">
+        <h1>Especialistas em Benefícios e Aposentadorias do INSS no Acre</h1>
+        <p>Atuamos com dedicação para assegurar seus direitos previdenciários, trabalhistas, civis e, também, oferecer defesa especializada na área criminal sempre com excelência.</p>
+    </section>
+    <div class="cta-section">
+        <a href="#contato">FAÇA SUA CONSULTA NA ÁREA DA PREVIDÊNCIA</a>
+        <a href="https://wa.me/5568999201818" target="_blank">
+            Agende uma Consulta com a Dra. Rosa Agora
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20">
+        </a>
     </div>
+    <section id="servicos">
+        <h2>Advogado Previdenciário Especialista em INSS no Acre</h2>
+        <ul>
+            <li><strong>Orientação e Consultoria:</strong> Planejamento estratégico e análise de benefícios previdenciários.</li>
+            <li><strong>Requerimento de Benefícios:</strong> Assistência no pedido de aposentadorias, benefício por incapacidade temporária, entre outros.</li>
+            <li><strong>Defesa em Processos Administrativos:</strong> Recursos contra decisões negativas do INSS e correção de erros.</li>
+        </ul>
+    </section>
+    <section id="penal">
+        <h2>Direito Penal no Acre – Defesa Especializada</h2>
+        <ul>
+            <li><strong>Defesa Criminal:</strong> Representação em casos de acusação criminal.</li>
+            <li><strong>Assessoria Jurídica:</strong> Orientação em investigações e processos penais.</li>
+        </ul>
+        <div style="text-align: center;">
+            <a href="https://wa.me/556899890477" target="_blank" style="background: #25D366;">Converse com o Dr. Benício pelo WhatsApp</a>
+        </div>
+    </section>
+    <section id="contato">
+        <h2>Contato</h2>
+        <ul>
+            <li><strong>Email:</strong> rminadvocacia@gmail.com</li>
+            <li><strong>Telefone:</strong> (68) 99920-1818</li>
+            <li><strong>Endereço:</strong> Rua Delfim Neto, nº 47, Bairro Bosque, Rio Branco-AC</li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2024 Advocacia Previdenciária, Trabalhista e Civil - Todos os Direitos Reservados</p>
+    </footer>
 </body>
 </html>
 
