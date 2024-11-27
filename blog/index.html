@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Metadados -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Advocacia Previdenciária</title>
-    <!-- Meta Tags para SEO -->
-    <meta name="description" content="Bem-vindo ao Blog da Advocacia Previdenciária! Encontre respostas atualizadas sobre aposentadoria, benefícios do INSS e a importância do advogado na conquista dos seus direitos.">
+    <meta name="description" content="Encontre respostas atualizadas sobre aposentadoria, benefícios do INSS e a importância do advogado na conquista dos seus direitos.">
     <meta name="keywords" content="Advocacia Previdenciária, INSS, Aposentadoria, Benefícios, Advogado Previdenciário, 2024">
     <meta name="author" content="Advocacia Previdenciária">
 
@@ -17,6 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Advocacia Previdenciária">
 
+    <!-- Estilos -->
     <style>
         /* Estilos Gerais */
         body {
@@ -69,6 +70,16 @@
             color: #FF7F00;
             margin-bottom: 30px;
         }
+        /* Categorias */
+        .category {
+            margin-bottom: 40px;
+        }
+        .category h3 {
+            color: #004080;
+            border-bottom: 2px solid #FF7F00;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
         .questions {
             display: flex;
             flex-wrap: wrap;
@@ -84,14 +95,22 @@
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             position: relative;
         }
-        .card h3 {
+        .card h4 {
             color: #004080;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
         }
-        .card h3 img {
+        .card h4 img {
             margin-right: 10px;
+            width: 30px;
+        }
+        /* Bolinhas Coloridas */
+        .card h4::before {
+            content: "🟡 ";
+        }
+        .card p::before {
+            content: "🟢 ";
         }
         .card p {
             color: #333;
@@ -155,77 +174,93 @@
     </header>
     <nav>
         <a href="#inicio">Início</a>
-        <a href="#perguntas">Perguntas e Respostas</a>
+        <a href="#aposentadoria">Aposentadoria</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#contribuicao">Contribuição</a>
         <a href="https://wa.me/5568999201818" target="_blank">Contato</a>
         <a href="https://www.prevadv.com.br">Site Principal</a>
     </nav>
     <main>
-        <section id="perguntas">
-            <h2>Perguntas Frequentes sobre Benefícios Previdenciários</h2>
+        <!-- Categoria Aposentadoria -->
+        <section id="aposentadoria" class="category">
+            <h3>Aposentadoria</h3>
             <div class="questions">
                 <!-- Card 1 -->
                 <div class="card">
-                    <h3><img src="../imagens/icon-beneficio-negado.png" alt="Ícone benefício negado" width="30">O que fazer quando o INSS nega meu benefício?</h3>
-                    <p>Não desanime! É fundamental procurar um advogado especializado para avaliar seu caso. Ele poderá entrar com um recurso administrativo ou ação judicial para garantir seus direitos.</p>
-                    <a href="https://wa.me/5568999201818" target="_blank">Fale com um advogado agora</a>
+                    <h4><img src="../imagens/icon-aposentadoria.png" alt="Ícone aposentadoria">Quais são as regras gerais para aposentadoria em 2024?</h4>
+                    <p><strong>Mulheres:</strong> Idade mínima de 62 anos e, no mínimo, 15 anos de contribuição.</p>
+                    <p><strong>Homens:</strong> Idade mínima de 65 anos e, no mínimo, 20 anos de contribuição.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">🟠 Saiba como se aposentar</a>
                 </div>
                 <!-- Card 2 -->
                 <div class="card">
-                    <h3><img src="../imagens/icon-aposentadoria.png" alt="Ícone aposentadoria" width="30">Quais são as regras gerais para aposentadoria em 2024?</h3>
-                    <p><strong>Mulheres:</strong> Idade mínima de 62 anos e, no mínimo, 15 anos de contribuição.</p>
-                    <p><strong>Homens:</strong> Idade mínima de 65 anos e, no mínimo, 20 anos de contribuição.</p>
-                    <a href="https://wa.me/5568999201818" target="_blank">Saiba como se aposentar</a>
+                    <h4><img src="../imagens/icon-reforma.png" alt="Ícone reforma">Como funcionam as regras de transição da Reforma da Previdência?</h4>
+                    <p>As regras de transição foram criadas para quem já contribuía antes da Reforma. Elas incluem sistema de pontos, idade progressiva e pedágios de 50% ou 100%. Cada caso deve ser analisado individualmente.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">🟠 Verifique seu caso com um especialista</a>
                 </div>
                 <!-- Card 3 -->
                 <div class="card">
-                    <h3><img src="../imagens/icon-reforma.png" alt="Ícone reforma" width="30">Como funcionam as regras de transição da Reforma da Previdência?</h3>
-                    <p>As regras de transição foram criadas para quem já contribuía antes da Reforma. Elas incluem sistema de pontos, idade progressiva e pedágios de 50% ou 100%. Cada caso deve ser analisado individualmente.</p>
-                    <a href="https://wa.me/5568999201818" target="_blank">Verifique seu caso com um especialista</a>
+                    <h4><img src="../imagens/icon-calculo-aposentadoria.png" alt="Ícone cálculo">Como funciona o cálculo da aposentadoria em 2024?</h4>
+                    <p>O cálculo considera a média de todos os salários de contribuição desde julho de 1994. É aplicado um percentual conforme o tempo de contribuição. Um advogado pode fazer um cálculo detalhado para você.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">🟠 Solicite um cálculo previdenciário</a>
                 </div>
                 <!-- Card 4 -->
                 <div class="card">
-                    <h3><img src="../imagens/icon-tempo.png" alt="Ícone tempo de contribuição" width="30">Como é calculado o tempo de contribuição?</h3>
-                    <p>O tempo de contribuição é contabilizado pelo CNIS. É importante verificar se todas as contribuições estão registradas corretamente. Em caso de divergências, um advogado pode auxiliar na regularização.</p>
-                    <a href="https://wa.me/5568999201818" target="_blank">Consulte um advogado</a>
+                    <h4><img src="../imagens/icon-tempo-especial.png" alt="Ícone tempo especial">O que é tempo especial e como ele impacta na aposentadoria?</h4>
+                    <p>O tempo especial é concedido a trabalhadores expostos a agentes nocivos. Ele reduz o tempo necessário para aposentadoria. A comprovação é feita através de documentos como o PPP.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">🟠 Verifique seu direito ao tempo especial</a>
                 </div>
                 <!-- Card 5 -->
                 <div class="card">
-                    <h3><img src="../imagens/icon-especial.png" alt="Ícone tempo especial" width="30">O que é tempo especial e como ele impacta na aposentadoria?</h3>
-                    <p>O tempo especial é concedido a trabalhadores expostos a agentes nocivos. Ele reduz o tempo necessário para aposentadoria. A comprovação é feita através de documentos como o PPP.</p>
-                    <a href="https://wa.me/5568999201818" target="_blank">Verifique seu direito ao tempo especial</a>
-                </div>
-                <!-- Card 6 -->
-                <div class="card">
-                    <h3><img src="../imagens/icon-calculo.png" alt="Ícone cálculo" width="30">Como funciona o cálculo da aposentadoria em 2024?</h3>
-                    <p>O cálculo considera a média de todos os salários de contribuição desde julho de 1994. É aplicado um percentual conforme o tempo de contribuição. Um advogado pode fazer um cálculo detalhado para você.</p>
-                    <a href="https://wa.me/5568999201818" target="_blank">Solicite um cálculo previdenciário</a>
-                </div>
-                <!-- Card 7 -->
-                <div class="card">
-                    <h3><img src="../imagens/icon-pensao.png" alt="Ícone pensão por morte" width="30">Quem tem direito à pensão por morte?</h3>
-                    <p>Dependentes do segurado falecido, como cônjuge, companheiro(a), filhos menores de 21 anos ou inválidos, têm direito ao benefício. A duração varia conforme a idade e o tipo de dependente.</p>
-                    <a href="https://wa.me/5568999201818" target="_blank">Saiba mais sobre pensão por morte</a>
-                </div>
-                <!-- Card 8 -->
-                <div class="card">
-                    <h3><img src="../imagens/icon-rural.png" alt="Ícone trabalhador rural" width="30">Como períodos rurais contam para a aposentadoria?</h3>
+                    <h4><img src="../imagens/icon-trabalho-rural.png" alt="Ícone trabalho rural">Como períodos rurais contam para a aposentadoria?</h4>
                     <p>O tempo trabalhado na zona rural pode ser contabilizado para aposentadoria, mesmo sem contribuições ao INSS. É necessário comprovar a atividade rural por meio de documentos específicos.</p>
-                    <a href="https://wa.me/5568999201818" target="_blank">Verifique como comprovar tempo rural</a>
-                </div>
-                <!-- Card 9 -->
-                <div class="card">
-                    <h3><img src="../imagens/icon-beneficio-suspenso.png" alt="Ícone benefício suspenso" width="30">O que fazer se meu benefício foi suspenso pelo INSS?</h3>
-                    <p>Verifique o motivo da suspensão. Pode ser necessário atualizar dados ou realizar nova perícia. Um advogado pode orientar sobre como proceder e recorrer, se for o caso.</p>
-                    <a href="https://wa.me/5568999201818" target="_blank">Resolva a suspensão do seu benefício</a>
-                </div>
-                <!-- Card 10 -->
-                <div class="card">
-                    <h3><img src="../imagens/icon-auxilio.png" alt="Ícone auxílio-doença" width="30">Quem tem direito ao auxílio-doença?</h3>
-                    <p>Segurados que estão temporariamente incapazes de trabalhar por doença ou acidente. É necessária a comprovação por perícia médica. A carência mínima é de 12 contribuições, exceto em casos específicos.</p>
-                    <a href="https://wa.me/5568999201818" target="_blank">Agende uma consulta para auxílio-doença</a>
+                    <a href="https://wa.me/5568999201818" target="_blank">🟠 Saiba como comprovar tempo rural</a>
                 </div>
             </div>
         </section>
+        <!-- Categoria Benefícios -->
+        <section id="beneficios" class="category">
+            <h3>Benefícios</h3>
+            <div class="questions">
+                <!-- Card 6 -->
+                <div class="card">
+                    <h4><img src="../imagens/icon-beneficio-negado.png" alt="Ícone benefício negado">O que fazer quando o INSS nega meu benefício?</h4>
+                    <p>Primeiramente, é importante não desanimar. Procure um advogado especializado; ele poderá entrar com um recurso administrativo ou judicial, dependendo do caso.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">🟠 Fale com um advogado agora</a>
+                </div>
+                <!-- Card 7 -->
+                <div class="card">
+                    <h4><img src="../imagens/icon-pensao-morte.png" alt="Ícone pensão por morte">Quem tem direito à pensão por morte?</h4>
+                    <p>Dependentes do segurado falecido, como cônjuge, companheiro(a), filhos menores de 21 anos ou inválidos, têm direito ao benefício. A duração varia conforme a idade e o tipo de dependente.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">🟠 Saiba mais sobre pensão por morte</a>
+                </div>
+                <!-- Card 8 -->
+                <div class="card">
+                    <h4><img src="../imagens/icon-beneficio-suspenso.png" alt="Ícone benefício suspenso">O que fazer se meu benefício foi suspenso pelo INSS?</h4>
+                    <p>Verifique o motivo da suspensão. Pode ser necessário atualizar dados ou realizar nova perícia. Um advogado pode orientar sobre como proceder e recorrer, se for o caso.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">🟠 Resolva a suspensão do seu benefício</a>
+                </div>
+                <!-- Card 9 -->
+                <div class="card">
+                    <h4><img src="../imagens/icon-auxilio-doenca.png" alt="Ícone auxílio-doença">Quem tem direito ao auxílio-doença?</h4>
+                    <p>Segurados que estão temporariamente incapazes de trabalhar por doença ou acidente. É necessária a comprovação por perícia médica. A carência mínima é de 12 contribuições, exceto em casos específicos.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">🟠 Agende uma consulta para auxílio-doença</a>
+                </div>
+            </div>
+        </section>
+        <!-- Categoria Contribuição -->
+        <section id="contribuicao" class="category">
+            <h3>Contribuição</h3>
+            <div class="questions">
+                <!-- Card 10 -->
+                <div class="card">
+                    <h4><img src="../imagens/icon-tempo-contribuicao.png" alt="Ícone tempo de contribuição">Como é calculado o tempo de contribuição?</h4>
+                    <p>O tempo de contribuição é contabilizado pelo CNIS. É importante verificar se todas as contribuições estão registradas corretamente. Em caso de divergências, um advogado pode auxiliar na regularização.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">🟠 Consulte um advogado</a>
+                </div>
+            </div>
+        </section>
+        <!-- Botão de Contato -->
         <div class="button-group">
             <a href="https://wa.me/5568999201818" target="_blank">Fale com a Dra. Rosa
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="25">
@@ -237,7 +272,6 @@
     </footer>
 </body>
 </html>
-
 
 
 
