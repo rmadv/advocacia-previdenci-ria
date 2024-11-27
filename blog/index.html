@@ -1,11 +1,24 @@
-blog/index.html
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Advocacia Previdenciária</title>
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Bem-vindo ao Blog da Advocacia Previdenciária! Encontre respostas atualizadas sobre aposentadoria, benefícios do INSS e a importância do advogado na conquista dos seus direitos.">
+    <meta name="keywords" content="Advocacia Previdenciária, INSS, Aposentadoria, Benefícios, Advogado Previdenciário, 2024">
+    <meta name="author" content="Advocacia Previdenciária">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blog | Advocacia Previdenciária">
+    <meta property="og:description" content="Encontre informações atualizadas sobre benefícios previdenciários e saiba como um advogado pode ajudar você a garantir seus direitos.">
+    <meta property="og:image" content="https://www.prevadv.com.br/imagens/homem-no-campo.jpg">
+    <meta property="og:url" content="https://www.prevadv.com.br/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Advocacia Previdenciária">
+
     <style>
+        /* Estilos Gerais */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -14,14 +27,21 @@ blog/index.html
             background-color: #F5F5F5;
         }
         header {
-            background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
-            color: #fff;
+            position: relative;
             text-align: center;
-            padding: 2rem;
+            color: white;
+        }
+        header img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         header h1 {
-            background-color: rgba(0, 0, 0, 0.7);
-            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 10px 20px;
             border-radius: 5px;
         }
@@ -41,31 +61,51 @@ blog/index.html
         }
         main {
             padding: 2rem;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            color: #FF7F00;
+            margin-bottom: 30px;
         }
         .questions {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
-            justify-content: space-between;
+            gap: 20px;
+            justify-content: center;
         }
         .card {
-            flex: 1;
-            min-width: 250px;
+            flex: 1 1 300px;
             background: #fff;
             border: 2px solid #FF7F00;
             border-radius: 10px;
-            padding: 15px;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         .card h3 {
             color: #004080;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .card h3 img {
+            margin-right: 10px;
         }
         .card p {
-            font-style: italic;
             color: #333;
+            margin-bottom: 10px;
+        }
+        .card a {
+            display: block;
+            margin-top: 15px;
+            text-decoration: none;
+            color: #FF7F00;
+            font-weight: bold;
+        }
+        .card a:hover {
+            text-decoration: underline;
         }
         footer {
             background: linear-gradient(to right, #FF7F00, #004080);
@@ -76,39 +116,42 @@ blog/index.html
         }
         .button-group {
             text-align: center;
-            margin: 20px 0;
+            margin: 30px 0;
         }
         .button-group a {
             display: inline-block;
             margin: 5px;
-            padding: 10px 20px;
-            background: #004080;
+            padding: 15px 25px;
+            background: #25D366;
             color: #fff;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 50px;
             font-weight: bold;
+            transition: background 0.3s;
         }
         .button-group a:hover {
-            background: #002a5c;
+            background: #1ebe57;
         }
         .button-group img {
             vertical-align: middle;
             margin-left: 10px;
         }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .questions {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                max-width: 90%;
+            }
+        }
     </style>
-    <meta property="og:title" content="Blog | Advocacia Previdenciária">
-    <meta property="og:description" content="Bem-vindo ao Blog da Advocacia Previdenciária! Encontre respostas sobre aposentadoria, benefícios do INSS e mais.">
-    <meta property="og:image" content="https://www.prevadv.com.br/imagens/homem-no-campo.jpg">
-    <meta property="og:url" content="https://www.prevadv.com.br/blog/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Advocacia Previdenciária">
 </head>
 <body>
-    <header style="position: relative; text-align: center; color: white;">
-    <img src="../Homem no campo.webp" alt="Homem trabalhando no campo" style="width: 100%; height: auto; display: block;">
-    <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.5); padding: 10px; border-radius: 5px;">
-        Bem-vindo ao Blog da Advocacia Previdenciária
-    </h1>
+    <header>
+        <img src="../Homem no campo.webp" alt="Homem trabalhando no campo">
+        <h1>Bem-vindo ao Blog da Advocacia Previdenciária</h1>
     </header>
     <nav>
         <a href="#inicio">Início</a>
@@ -118,96 +161,83 @@ blog/index.html
     </nav>
     <main>
         <section id="perguntas">
-    <h2 style="text-align: center; color: #FF7F00;">Perguntas e Respostas</h2>
-    <div class="questions">
-        <div class="card">
-            <h3>🟡 O que fazer quando o INSS nega meu benefício?</h3>
-            <p>🟢 Primeiramente, é importante não desanimar. Procure um advogado. ele entrará com um recurso administrativo ou judicial, dependendo do caso.</p>
+            <h2>Perguntas Frequentes sobre Benefícios Previdenciários</h2>
+            <div class="questions">
+                <!-- Card 1 -->
+                <div class="card">
+                    <h3><img src="../imagens/icon-beneficio-negado.png" alt="Ícone benefício negado" width="30">O que fazer quando o INSS nega meu benefício?</h3>
+                    <p>Não desanime! É fundamental procurar um advogado especializado para avaliar seu caso. Ele poderá entrar com um recurso administrativo ou ação judicial para garantir seus direitos.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">Fale com um advogado agora</a>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <h3><img src="../imagens/icon-aposentadoria.png" alt="Ícone aposentadoria" width="30">Quais são as regras gerais para aposentadoria em 2024?</h3>
+                    <p><strong>Mulheres:</strong> Idade mínima de 62 anos e, no mínimo, 15 anos de contribuição.</p>
+                    <p><strong>Homens:</strong> Idade mínima de 65 anos e, no mínimo, 20 anos de contribuição.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">Saiba como se aposentar</a>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <h3><img src="../imagens/icon-reforma.png" alt="Ícone reforma" width="30">Como funcionam as regras de transição da Reforma da Previdência?</h3>
+                    <p>As regras de transição foram criadas para quem já contribuía antes da Reforma. Elas incluem sistema de pontos, idade progressiva e pedágios de 50% ou 100%. Cada caso deve ser analisado individualmente.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">Verifique seu caso com um especialista</a>
+                </div>
+                <!-- Card 4 -->
+                <div class="card">
+                    <h3><img src="../imagens/icon-tempo.png" alt="Ícone tempo de contribuição" width="30">Como é calculado o tempo de contribuição?</h3>
+                    <p>O tempo de contribuição é contabilizado pelo CNIS. É importante verificar se todas as contribuições estão registradas corretamente. Em caso de divergências, um advogado pode auxiliar na regularização.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">Consulte um advogado</a>
+                </div>
+                <!-- Card 5 -->
+                <div class="card">
+                    <h3><img src="../imagens/icon-especial.png" alt="Ícone tempo especial" width="30">O que é tempo especial e como ele impacta na aposentadoria?</h3>
+                    <p>O tempo especial é concedido a trabalhadores expostos a agentes nocivos. Ele reduz o tempo necessário para aposentadoria. A comprovação é feita através de documentos como o PPP.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">Verifique seu direito ao tempo especial</a>
+                </div>
+                <!-- Card 6 -->
+                <div class="card">
+                    <h3><img src="../imagens/icon-calculo.png" alt="Ícone cálculo" width="30">Como funciona o cálculo da aposentadoria em 2024?</h3>
+                    <p>O cálculo considera a média de todos os salários de contribuição desde julho de 1994. É aplicado um percentual conforme o tempo de contribuição. Um advogado pode fazer um cálculo detalhado para você.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">Solicite um cálculo previdenciário</a>
+                </div>
+                <!-- Card 7 -->
+                <div class="card">
+                    <h3><img src="../imagens/icon-pensao.png" alt="Ícone pensão por morte" width="30">Quem tem direito à pensão por morte?</h3>
+                    <p>Dependentes do segurado falecido, como cônjuge, companheiro(a), filhos menores de 21 anos ou inválidos, têm direito ao benefício. A duração varia conforme a idade e o tipo de dependente.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">Saiba mais sobre pensão por morte</a>
+                </div>
+                <!-- Card 8 -->
+                <div class="card">
+                    <h3><img src="../imagens/icon-rural.png" alt="Ícone trabalhador rural" width="30">Como períodos rurais contam para a aposentadoria?</h3>
+                    <p>O tempo trabalhado na zona rural pode ser contabilizado para aposentadoria, mesmo sem contribuições ao INSS. É necessário comprovar a atividade rural por meio de documentos específicos.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">Verifique como comprovar tempo rural</a>
+                </div>
+                <!-- Card 9 -->
+                <div class="card">
+                    <h3><img src="../imagens/icon-beneficio-suspenso.png" alt="Ícone benefício suspenso" width="30">O que fazer se meu benefício foi suspenso pelo INSS?</h3>
+                    <p>Verifique o motivo da suspensão. Pode ser necessário atualizar dados ou realizar nova perícia. Um advogado pode orientar sobre como proceder e recorrer, se for o caso.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">Resolva a suspensão do seu benefício</a>
+                </div>
+                <!-- Card 10 -->
+                <div class="card">
+                    <h3><img src="../imagens/icon-auxilio.png" alt="Ícone auxílio-doença" width="30">Quem tem direito ao auxílio-doença?</h3>
+                    <p>Segurados que estão temporariamente incapazes de trabalhar por doença ou acidente. É necessária a comprovação por perícia médica. A carência mínima é de 12 contribuições, exceto em casos específicos.</p>
+                    <a href="https://wa.me/5568999201818" target="_blank">Agende uma consulta para auxílio-doença</a>
+                </div>
+            </div>
+        </section>
+        <div class="button-group">
+            <a href="https://wa.me/5568999201818" target="_blank">Fale com a Dra. Rosa
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="25">
+            </a>
         </div>
-        <div class="card">
-            <h3>🟡 Quais são as regras gerais para aposentadoria?</h3>
-            <p>🟢 <strong>Mulheres:</strong> Idade mínima de 62 anos e, no mínimo, 15 anos de contribuição.</p>
-            <p>🟢 <strong>Homens:</strong> Idade mínima de 65 anos e, no mínimo, 20 anos de contribuição.</p>
-       </div>
-        <div class="card">
-            <h3>🟡 Como funciona a aposentadoria por tempo de contribuição antes da Reforma?</h3>
-            <p>🟢 Mulheres: 30 anos de contribuição. Homens: 35 anos de contribuição.</p>
-       </div>
-        <div class="card">
-            <h3>🟡 O que mudou com as regras de transição da Reforma?</h3>
-            <p>🟢 Sistema de pontos: Soma da idade e do tempo de contribuição deve atingir 86 pontos (mulheres) ou 96 pontos (homens), com aumento anual de 1 ponto. Idade progressiva: Idade mínima começa em 56 anos para mulheres e 61 anos para homens, aumentando 6 meses ao ano. Pedágio de 50%: Para quem estava a menos de 2 anos de completar o tempo de contribuição antes da Reforma. Pedágio de 100%: Deve-se cumprir o tempo restante mais 100% do período.</p>
-       </div>
-        <div class="card">
-            <h3>🟡 Como é calculado o tempo de contribuição?</h3>
-            <p>🟢 O INSS utiliza o Cadastro Nacional de Informações Sociais (CNIS) para registrar os períodos de contribuição. O segurado pode consultar o tempo de contribuição no portal Meu INSS.</p>
-       </div>
-        <div class="card">
-            <h3>🟡 O que é tempo especial?</h3>
-            <p>🟢 Tempo especial é concedido a quem trabalhou em atividades insalubres ou perigosas, reduzindo o tempo necessário para aposentadoria. É comprovado por meio de documentos como o PPP.</p>
-       </div>
-       <div class="card">
-            <h3>🟡 Como funciona o cálculo de aposentadoria?</h3>
-            <p>🟢 O cálculo depende da média salarial e do tempo de contribuição. Cada caso é analisado individualmente.</p>
-        </div>
-        
-        <div class="card">
-            <h3>🟡 Quem pode solicitar pensão por morte?</h3>
-            <p>🟢 Dependentes do segurado falecido, como cônjuge, filhos menores de idade ou inválidos, têm direito ao benefício.</p>
-        </div>
-        <div class="card">
-            <h3>🟡 Como períodos rurais contam para a aposentadoria?</h3>
-            <p>🟢 Períodos rurais podem ser contados para a aposentadoria mediante comprovação, como certidão de nascimento dos filhos ou notas fiscais de produção rural.</p>
-        </div>
-        <div class="card">
-            <h3>🟡 Qual é a diferença entre aposentadoria por idade e por tempo de contribuição?</h3>
-            <p>🟢 A aposentadoria por idade exige idade mínima e 15 anos de contribuição. A aposentadoria por tempo de contribuição, agora extinta para novos segurados, considerava apenas o período de contribuição.</p>
-        </div>
-        <div class="card">
-            <h3>🟡 O que fazer se meu benefício foi suspenso pelo INSS?</h3>
-            <p>🟢 Se o benefício foi suspenso, pode ser necessário apresentar documentos ou passar por uma nova perícia médica. É fundamental verificar a carta ou notificação recebida e cumprir o prazo indicado. Caso o motivo da suspensão seja injusto, você pode recorrer.</p>
-        </div>
-        <div class="card">
-            <h3>🟡 Quem tem direito ao auxílio-doença?</h3>
-            <p>🟢 O auxílio-doença é concedido ao segurado do INSS que está temporariamente incapaz de trabalhar devido a doença ou acidente. É necessário ter cumprido a carência mínima de 12 meses, salvo em casos de acidente ou doenças graves previstas em lei.</p>
-        </div>
-        <div class="card">
-            <h3>🟡 O que é o PPP e por que ele é importante para aposentadoria especial?</h3>
-            <p>🟢 O Perfil Profissiográfico Previdenciário (PPP) é um documento emitido pelo empregador que comprova exposição a agentes nocivos no ambiente de trabalho. Ele é fundamental para solicitar a aposentadoria especial.</p>
-        </div>
-        <div class="card">
-            <h3>🟡 Como funciona o tempo de contribuição para quem trabalhou em regime rural?</h3>
-            <p>🟢 Quem trabalhou na zona rural pode contar esse período para a aposentadoria, desde que comprove a atividade por meio de documentos, como certidão de nascimento dos filhos, notas fiscais de produção rural, entre outros.</p>
-        </div>
-        <div class="card">
-            <h3>🟡 Qual a diferença entre aposentadoria por idade e por tempo de contribuição?</h3>
-            <p>🟢 A aposentadoria por idade exige uma idade mínima (65 anos para homens e 60 anos para mulheres, com redução para trabalhadores rurais) e pelo menos 15 anos de contribuição. Já a aposentadoria por tempo de contribuição considera apenas o período de contribuição, que deve ser de 35 anos para homens e 30 anos para mulheres.</p>
-        </div>
-        <div class="card">
-            <h3>🟡 Quem tem direito ao Benefício de Prestação Continuada (BPC/LOAS)?</h3>
-            <p>🟢 O BPC é destinado a idosos com mais de 65 anos ou pessoas com deficiência que não podem prover sua própria subsistência. É necessário comprovar renda familiar de até 1/4 do salário mínimo por pessoa.</p>
-        </div>
-        <div class="card">
-            <h3>🟡 Como saber se já posso me aposentar?</h3>
-            <p>🟢 É necessário verificar o tempo de contribuição, idade e tipo de benefício desejado. Você pode consultar o CNIS (Cadastro Nacional de Informações Sociais) no site ou aplicativo do INSS para conferir seu histórico de contribuições.</p>
-        </div>
-        <div class="card">
-            <h3>🟡 Quem pode solicitar o salário-maternidade?</h3>
-            <p>🟢 O salário-maternidade pode ser solicitado por mulheres seguradas do INSS, sejam empregadas, desempregadas ou contribuintes individuais. Ele também pode ser concedido a pais adotivos.</p>
-        </div>
-    </div>
-</section>
-<div class="button-group">
-    <a href="https://wa.me/5568999201818" target="_blank">Fale com Dra. Rosa
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20">
-    </a>
-</div>
-
     </main>
     <footer>
         <p>&copy; 2024 Advocacia Previdenciária, Trabalhista e Civil</p>
     </footer>
 </body>
 </html>
+
 
 
 
