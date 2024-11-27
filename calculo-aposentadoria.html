@@ -26,7 +26,7 @@
             margin-top: 10px;
         }
 
-        input[type="number"] {
+        input[type="number"], select {
             width: 100%;
             padding: 8px;
             margin-top: 5px;
@@ -54,7 +54,7 @@
             font-weight: bold;
         }
 
-        .instruction {
+        .instruction, .important-note {
             background-color: #e0f7fa;
             border-left: 5px solid #0288d1;
             padding: 15px;
@@ -62,30 +62,10 @@
             color: #003366;
         }
 
-        .contact {
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .contact p {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .contact a {
-            color: #0288d1;
-            font-weight: bold;
-            text-decoration: none;
-            background-color: white;
-            padding: 12px 20px;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-        }
-
-        .contact a:hover {
-            background-color: #0288d1;
-            color: white;
+        .important-note {
+            background-color: #fff9c4;
+            border-left: 5px solid #ffcc00;
+            color: #665700;
         }
     </style>
 </head>
@@ -108,6 +88,13 @@
     </div>
 
     <form id="simulation-form">
+        <label for="gender">Gênero:</label>
+        <select id="gender" required>
+            <option value="">Selecione...</option>
+            <option value="homem">Homem</option>
+            <option value="mulher">Mulher</option>
+        </select>
+
         <label for="averageSalary">Média salarial (R$):</label>
         <input type="number" id="averageSalary" placeholder="Digite a média salarial (R$)" required>
 
@@ -119,38 +106,53 @@
 
     <div class="result" id="result"></div>
 
-    <div class="contact">
-        <p>📞 Entre em contato com a Dra. para mais informações:</p>
-        <p>Telefone/WhatsApp: <strong>+55 68 99920-1818</strong></p>
-        <a href="https://wa.me/5568999201818" target="_blank">💬 Fale pelo WhatsApp</a>
+    <div class="important-note">
+        <p>
+            <strong>Importante:</strong><br>
+            Se você atender aos dois requisitos para aposentadoria — tempo mínimo de contribuição e idade mínima — o valor do seu benefício não poderá ser inferior ao salário mínimo vigente, mesmo que o cálculo inicial resulte em um valor menor.
+        </p>
+        <p>
+            Isso ocorre porque a Constituição Federal garante que nenhum benefício previdenciário seja pago em valor inferior ao salário mínimo. Portanto, se o valor calculado estiver abaixo de R$ 1.412,00 (salário mínimo atual), ele será ajustado automaticamente para esse valor.
+        </p>
     </div>
 
     <script>
         function calculateRetirement() {
-            // Obter os valores inseridos pelo usuário
+            const gender = document.getElementById('gender').value;
             const averageSalary = parseFloat(document.getElementById('averageSalary').value);
             const contributionTime = parseFloat(document.getElementById('contributionTime').value);
 
-            // Validar entrada
-            if (isNaN(averageSalary) || isNaN(contributionTime) || averageSalary <= 0 || contributionTime <= 0) {
+            // Validar entradas
+            if (!gender || isNaN(averageSalary) || isNaN(contributionTime) || averageSalary <= 0 || contributionTime <= 0) {
                 document.getElementById('result').textContent = "Por favor, insira valores válidos.";
                 return;
             }
 
-            // Aplicar percentual conforme o tempo de contribuição
+            // Definir o tempo mínimo de contribuição por gênero
+            const minContributionTime = gender === "homem" ? 20 : 15;
+
+            // Verificar tempo de contribuição mínimo
+            if (contributionTime < minContributionTime) {
+                document.getElementById('result').textContent = `O tempo de contribuição informado está abaixo do mínimo necessário (${minContributionTime} anos para ${gender === "homem" ? "homens" : "mulheres"}).`;
+                return;
+            }
+
+            // Cálculo do percentual com base no tempo de contribuição
             let percentage = 0.6; // 60% inicial
-            if (contributionTime > 15) {
-                percentage += (contributionTime - 15) * 0.02; // 2% para cada ano acima de 15
+            if (contributionTime > minContributionTime) {
+                percentage += (contributionTime - minContributionTime) * 0.02; // 2% por ano adicional
             }
             if (percentage > 1) percentage = 1; // Máximo de 100%
 
             // Calcular o valor do benefício
-            const retirementValue = averageSalary * percentage;
+            let retirementValue = averageSalary * percentage;
 
-            // Exibir o resultado
+            // Garantir que o valor não seja inferior ao salário mínimo
+            if (retirementValue < 1412) retirementValue = 1412;
+
+            // Exibir resultado
             document.getElementById('result').textContent = `O valor estimado do seu benefício é: R$ ${retirementValue.toFixed(2)}`;
         }
     </script>
 </body>
 </html>
-
