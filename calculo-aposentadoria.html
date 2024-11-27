@@ -17,6 +17,10 @@
             color: #005b96;
         }
 
+        p {
+            margin-bottom: 15px;
+        }
+
         label {
             display: block;
             margin-top: 10px;
@@ -49,11 +53,33 @@
             margin-top: 20px;
             font-weight: bold;
         }
+
+        .instruction {
+            background-color: #e0f7fa;
+            border-left: 5px solid #0288d1;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #003366;
+        }
     </style>
 </head>
 <body>
     <h1>Simulação de Cálculo da Aposentadoria</h1>
-    <p>Insira seus dados abaixo para simular o valor estimado do seu benefício:</p>
+    <div class="instruction">
+        <p>
+            <strong>O que é a média salarial?</strong><br>
+            A média salarial é calculada com base em todos os salários de contribuição registrados desde julho de 1994 (ou desde o início das suas contribuições, se posterior). 
+        </p>
+        <p>
+            <strong>Como preencher?</strong><br>
+            - No campo "Média Salarial", insira a média dos valores dos seus salários de contribuição em reais.<br>
+            - No campo "Tempo de Contribuição", informe quantos anos você contribuiu para o INSS.
+        </p>
+        <p>
+            <strong>Objetivo:</strong><br>
+            O cálculo irá estimar o valor mensal que você poderá receber ao se aposentar com base na sua média salarial e no tempo de contribuição informado.
+        </p>
+    </div>
 
     <form id="simulation-form">
         <label for="averageSalary">Média salarial (R$):</label>
