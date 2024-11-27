@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de Cálculo da Aposentadoria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f9fc;
+            color: #003366;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #005b96;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #005b96;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulação de Cálculo da Aposentadoria</h1>
+    <p>Insira seus dados abaixo para simular o valor estimado do seu benefício:</p>
+
+    <form id="simulation-form">
+        <label for="averageSalary">Média salarial (R$):</label>
+        <input type="number" id="averageSalary" placeholder="Digite a média salarial (R$)" required>
+
+        <label for="contributionTime">Tempo de contribuição (anos):</label>
+        <input type="number" id="contributionTime" placeholder="Digite o tempo de contribuição (anos)" required>
+
+        <button type="button" onclick="calculateRetirement()">Calcular</button>
+    </form>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        function calculateRetirement() {
+            // Obter os valores inseridos pelo usuário
+            const averageSalary = parseFloat(document.getElementById('averageSalary').value);
+            const contributionTime = parseFloat(document.getElementById('contributionTime').value);
+
+            // Validar entrada
+            if (isNaN(averageSalary) || isNaN(contributionTime) || averageSalary <= 0 || contributionTime <= 0) {
+                document.getElementById('result').textContent = "Por favor, insira valores válidos.";
+                return;
+            }
+
+            // Aplicar percentual conforme o tempo de contribuição
+            let percentage = 0.6; // 60% inicial
+            if (contributionTime > 15) {
+                percentage += (contributionTime - 15) * 0.02; // 2% para cada ano acima de 15
+            }
+            if (percentage > 1) percentage = 1; // Máximo de 100%
+
+            // Calcular o valor do benefício
+            const retirementValue = averageSalary * percentage;
+
+            // Exibir o resultado
+            document.getElementById('result').textContent = `O valor estimado do seu benefício é: R$ ${retirementValue.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
