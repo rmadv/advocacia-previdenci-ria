@@ -94,6 +94,40 @@ nav ul li a:hover {
             padding: 10px;
             margin-top: 20px;
         }
+        /* Estilos responsivos para dispositivos móveis (largura máxima de 768px) */
+@media only screen and (max-width: 768px) {
+    header div {
+        height: auto; /* Ajusta a altura do cabeçalho automaticamente */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empilha os itens do menu */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adiciona espaçamento entre os links */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Ajusta o tamanho da fonte */
+        padding: 8px 10px; /* Reduz o espaçamento interno */
+    }
+
+    section {
+        padding: 10px; /* Reduz o espaçamento das seções */
+    }
+
+    img {
+        max-width: 100%; /* Faz com que imagens não excedam a largura da tela */
+        height: auto;
+    }
+
+    .cta a {
+        font-size: 0.9rem; /* Reduz o tamanho do texto dos botões */
+        padding: 8px 15px; /* Ajusta o espaçamento interno dos botões */
+    }
+}
     </style>
 </head>
 <body>
