@@ -160,33 +160,35 @@ nav ul li a:hover {
 .menu {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 300px;
-    height: 100vh;
-    background: #f4f4f4;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: right 0.3s ease-in-out;
-    z-index: 1001;
-    overflow-y: auto;
+    left: 0; /* O menu começa no canto esquerdo */
+    width: 100%; /* O menu ocupa toda a largura da tela */
+    height: 100vh; /* O menu ocupa toda a altura da tela */
+    background: rgba(0, 0, 0, 0.9); /* Fundo preto com opacidade */
+    color: #fff; /* Texto branco */
+    box-shadow: none; /* Remove qualquer sombra */
+    transition: transform 0.3s ease-in-out; /* Suaviza a abertura do menu */
+    transform: translateX(-100%); /* Inicialmente, o menu fica fora da tela à esquerda */
+    z-index: 1001; /* Garante que o menu fique acima de outros elementos */
+    overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo for maior que a tela */
 }
 .menu.open {
-    right: 0;
+    transform: translateX(0); /* Move o menu para dentro da tela */
 }
 .menu-content {
     padding: 20px;
-    font-size: 1rem;
-    color: #333;
+    font-size: 1.2rem; /* Tamanho da fonte maior para boa visibilidade */
+    line-height: 1.6; /* Espaçamento entre as linhas */
 }
 .close-btn {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    right: 20px; /* Botão de fechar no canto superior direito */
     background: none;
     border: none;
-    font-size: 1.5rem;
+    color: #fff; /* Cor branca para o botão de fechar */
+    font-size: 2rem; /* Botão maior para fácil clique */
     cursor: pointer;
 }
-
     </style>
 </head>
 <body>
