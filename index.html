@@ -185,14 +185,20 @@ nav ul li a:hover {
 }
 .close-btn {
     position: absolute;
-    top: 20px;
-    right: 20px; /* Botão de fechar no canto superior direito */
+    top: 20px; /* Posicionado no canto superior direito */
+    right: 20px;
     background: none;
     border: none;
-    color: #fff; /* Cor branca para o botão de fechar */
-    font-size: 2rem; /* Botão maior para fácil clique */
+    color: #fff; /* Cor branca para contraste */
+    font-size: 2rem; /* Tamanho do botão */
     cursor: pointer;
+    z-index: 1002; /* Certifica-se de que o botão esteja acima de outros elementos */
 }
+
+.close-btn:hover {
+    color: #d4af37; /* Altere a cor ao passar o mouse */
+}
+
    .return-btn {
     position: absolute;
     top: 20px; /* Ajuste conforme necessário */
@@ -245,20 +251,18 @@ nav ul li a:hover {
 <script>
     // Seleciona os elementos do ícone e do menu
     const hamburger = document.getElementById('hamburger');
-    const menu = document.getElementById('menu');
-    const closeBtn = document.getElementById('close-btn');
-    const menuContent = document.getElementById('menu-content');
+const menu = document.getElementById('menu');
+const closeBtn = document.getElementById('close-btn');
 
-    // Evento para abrir o menu ao clicar no ícone hambúrguer
-    hamburger.addEventListener('click', () => {
-        menu.classList.add('open');
-    });
+// Evento para abrir o menu ao clicar no ícone hambúrguer
+hamburger.addEventListener('click', () => {
+    menu.classList.add('open');
+});
 
-    // Evento para fechar o menu ao clicar no botão de fechar
-    closeBtn.addEventListener('click', () => {
-        menu.classList.remove('open');
-    });
-
+// Evento para fechar o menu ao clicar no botão de fechar
+closeBtn.addEventListener('click', () => {
+    menu.classList.remove('open');
+});
     // Carregar o conteúdo de quem-somos.html no menu dinamicamente
     fetch('quem-somos.html')
         .then(response => {
