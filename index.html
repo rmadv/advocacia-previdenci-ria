@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advocacia Especializada | Previdência, Trabalhista, Civil e Penal</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <body>
     
-    <!-- Outros conteúdos seguem aqui -->
-
     <!-- Metatags Open Graph -->
     <meta property="og:title" content="Advocacia Especializada | Previdência, Trabalhista, Civil e Penal">
     <meta property="og:description" content="Atuação especializada em Direito Previdenciário, Trabalhista, Civil e Penal. Saiba mais e entre em contato.">
     <meta property="og:image" content="https://www.prevadv.com.br/Direito_Previdenciario.jpg">
     <meta property="og:url" content="https://www.prevadv.com.br/"> <!-- Página principal do site -->
     <meta property="og:type" content="website">
+  
     <style>
        body {
+          
     font-family: 'Merriweather', serif, 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
@@ -139,9 +138,74 @@ nav ul li a:hover {
         padding: 8px 15px; /* Ajusta o espaçamento interno dos botões */
     }
 }
+
+/* Estilos do Ícone Hambúrguer */
+.hamburger {
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px 0;
+    background-color: #333;
+}
+
+/* Estilos do Menu Lateral */
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: #f4f4f4;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+    overflow-y: auto;
+}
+.menu.open {
+    right: 0;
+}
+.menu-content {
+    padding: 20px;
+    font-size: 1rem;
+    color: #333;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
     </style>
 </head>
 <body>
+
+<div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+</div>
+
+       <!-- Menu Lateral -->
+<div class="menu" id="menu">
+    <button class="close-btn" id="close-btn">&times;</button>
+    <div class="menu-content" id="menu-content">
+        <!-- O conteúdo será carregado dinamicamente -->
+    </div>
+</div>
+    
+    <!-- Outros conteúdos seguem aqui -->
+
 <header style="background-color: #666666; padding: 0; margin: 0;">
     <div style="background-image: url('LOGOTIPO%20APROVADO_1.png'); 
                 background-size: cover; 
@@ -151,6 +215,27 @@ nav ul li a:hover {
                 width: 100%;">
     </div>
 </header>
+<script>
+    // Carregar conteúdo de quem-somos.html
+    const menuContent = document.getElementById('menu-content');
+
+    fetch('quem-somos.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao carregar o conteúdo.');
+            }
+            return response.text();
+        })
+        .then(html => {
+            menuContent.innerHTML = html; // Insere o conteúdo no menu
+        })
+        .catch(error => {
+            menuContent.innerHTML = '<p>Erro ao carregar o conteúdo. Tente novamente mais tarde.</p>';
+            console.error(error);
+        });
+</script>
+
+
     <nav>
         <ul>
             <li><a href="#previdencia">Previdência</a></li>
@@ -335,7 +420,8 @@ nav ul li a:hover {
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" style="vertical-align: middle; margin-left: 10px;">
             </a>
         </div>
-    </section>
+    </div>
+</section>
   <!-- Contato -->
 <!-- Contato -->
 <section id="contato">
@@ -348,8 +434,7 @@ nav ul li a:hover {
         <li><strong>Endereço:</strong> Rua Delfim Neto, nº 47, Bairro Bosque, Rio Branco-AC</li>
     </ul>
 </section>
-     
-     <footer>
+    <footer>
         <p>&copy; 2024 Advocacia Especializada. Todos os direitos reservados.</p>
     </footer>
 </body>
