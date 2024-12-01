@@ -142,17 +142,18 @@ nav ul li a:hover {
 /* Estilos do Ícone Hambúrguer */
 .hamburger {
     cursor: pointer;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
+    position: absolute;
+    top: 80px; /* Ajuste para posicionar acima da faixa amarela */
+    left: 20px; /* Mantém alinhado à esquerda */
+    z-index: 1000; /* Garante que ele fique acima de outros elementos */
 }
+
 .hamburger span {
     display: block;
     width: 30px;
     height: 4px;
     margin: 5px 0;
-    background-color: #333;
+    background-color: #333; /* Cor das linhas do ícone */
 }
 
 /* Estilos do Menu Lateral */
