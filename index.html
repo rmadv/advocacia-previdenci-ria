@@ -281,6 +281,7 @@ nav ul li a:hover {
     fetch('quem-somos.html')
         .then(response => {
             if (!response.ok) {
+                console.error('Erro ao carregar:', response.statusText);
                 throw new Error('Erro ao carregar o conteúdo.');
             }
             return response.text();
