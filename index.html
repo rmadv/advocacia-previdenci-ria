@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advocacia Especializada | Previdência, Trabalhista, Civil e Penal</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <body>
     
+    <!-- Outros conteúdos seguem aqui -->
+
     <!-- Metatags Open Graph -->
     <meta property="og:title" content="Advocacia Especializada | Previdência, Trabalhista, Civil e Penal">
     <meta property="og:description" content="Atuação especializada em Direito Previdenciário, Trabalhista, Civil e Penal. Saiba mais e entre em contato.">
     <meta property="og:image" content="https://www.prevadv.com.br/Direito_Previdenciario.jpg">
     <meta property="og:url" content="https://www.prevadv.com.br/"> <!-- Página principal do site -->
     <meta property="og:type" content="website">
-  
     <style>
        body {
-          
     font-family: 'Merriweather', serif, 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
@@ -138,110 +139,9 @@ nav ul li a:hover {
         padding: 8px 15px; /* Ajusta o espaçamento interno dos botões */
     }
 }
-
-/* Estilos do Ícone Hambúrguer */
-.hamburger {
-    cursor: pointer;
-    position: absolute;
-    top: 80px; /* Ajuste para posicionar acima da faixa amarela */
-    left: 20px; /* Mantém alinhado à esquerda */
-    z-index: 1000; /* Garante que ele fique acima de outros elementos */
-}
-
-.hamburger span {
-    display: block;
-    width: 30px;
-    height: 4px;
-    margin: 5px 0;
-    background-color: #fff; /* Cor branca para as linhas do ícone */
-}
-
-/* Estilos do Menu Lateral */
-/* Estilos do Menu Lateral */
-.menu {
-    position: fixed;
-    top: 0;
-    left: 0; /* Menu posicionado à esquerda */
-    width: 100%; /* Ocupa toda a largura */
-    height: 100vh; /* Ocupa toda a altura */
-    background: rgba(0, 0, 0, 0.9); /* Fundo escuro com opacidade */
-    color: #fff; /* Texto branco */
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(-100%); /* Inicialmente fora da tela */
-    z-index: 1001; /* Camada superior */
-    overflow-y: auto; /* Rolagem vertical se necessário */
-}
-
-.menu.open {
-    transform: translateX(0); /* Entra na tela */
-    background: rgba(255, 255, 255, 1); /* Mude para fundo branco quando aberto */
-}
-.menu-content {
-    padding: 20px; /* Espaçamento interno */
-    background: rgba(255, 255, 255, 1); /* Fundo branco sólido */
-    color: #333; /* Texto em cinza escuro */
-    font-size: 1rem; /* Tamanho do texto */
-    line-height: 1.6; /* Espaçamento entre linhas */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
-    overflow-y: auto; /* Rolagem se necessário */
-    z-index: 1002; /* Garante que fique acima de outros elementos */
-}
-/* Botão de Fechar */
-.close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 1002;
-}
-
-.close-btn:hover {
-    color: #d4af37;
-}
-   .return-btn {
-    position: absolute;
-    top: 20px; /* Ajuste conforme necessário */
-    left: 20px; /* Ajuste conforme necessário */
-    background-color: #1e3a5f; /* Azul marinho */
-    color: #fff; /* Texto branco */
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.return-btn:hover {
-    background-color: #d4af37; /* Dourado ao passar o mouse */
-}
-
     </style>
 </head>
 <body>
-
-<div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-</div>
-
-       <!-- Menu Lateral -->
-<div class="menu" id="menu">
-    <button class="close-btn" id="close-btn">&times;</button>
-    <div class="menu-content" id="menu-content">
-    
-        <!-- O conteúdo será carregado dinamicamente -->
-    </div>
-</div>
-    
-    <!-- Outros conteúdos seguem aqui -->
-
 <header style="background-color: #666666; padding: 0; margin: 0;">
     <div style="background-image: url('LOGOTIPO%20APROVADO_1.png'); 
                 background-size: cover; 
@@ -251,45 +151,6 @@ nav ul li a:hover {
                 width: 100%;">
     </div>
 </header>
-<script>
-    // Seleciona os elementos do ícone e do menu
-    const hamburger = document.getElementById('hamburger');
-    const menu = document.getElementById('menu');
-    const closeBtn = document.getElementById('close-btn');
-    const returnBtn = document.getElementById('return-btn');
-    const menuContent = document.querySelector('.menu-content'); // Agora estamos selecionando corretamente o menuContent
-
-    // Mensagem inicial de erro antes de tentar carregar o conteúdo
-    menuContent.innerHTML = '<p>Erro ao carregar o conteúdo. Tente novamente mais tarde.</p>';
-
-    // Evento para abrir o menu ao clicar no ícone hambúrguer
-    hamburger.addEventListener('click', () => {
-        menu.classList.add('open');
-    });
-
-    // Evento para fechar o menu ao clicar no botão de fechar
-    closeBtn.addEventListener('click', () => {
-        menu.classList.remove('open');
-    });
-    
-    // Carregar o conteúdo de quem-somos.html no menu dinamicamente
-    fetch('https://rmadv.github.io/advocacia-previdenci-ria/quem-somos.html')
-    .then(response => {
-        if (!response.ok) {
-            console.error('Erro ao carregar:', response.statusText);
-            throw new Error('Erro ao carregar o conteúdo.');
-        }
-        return response.text();
-    })
-    .then(html => {
-        menuContent.innerHTML = html;  // Insere o conteúdo carregado no menu
-    })
-    .catch(error => {
-        menuContent.innerHTML = '<p>Erro ao carregar o conteúdo. Tente novamente mais tarde.</p>';
-        console.error(error);
-    });
-
-</script>
     <nav>
         <ul>
             <li><a href="#previdencia">Previdência</a></li>
@@ -474,8 +335,7 @@ nav ul li a:hover {
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" style="vertical-align: middle; margin-left: 10px;">
             </a>
         </div>
-    </div>
-</section>
+    </section>
   <!-- Contato -->
 <!-- Contato -->
 <section id="contato">
@@ -488,12 +348,12 @@ nav ul li a:hover {
         <li><strong>Endereço:</strong> Rua Delfim Neto, nº 47, Bairro Bosque, Rio Branco-AC</li>
     </ul>
 </section>
-    <footer>
+     
+     <footer>
         <p>&copy; 2024 Advocacia Especializada. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
-
    
     
     
