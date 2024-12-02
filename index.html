@@ -164,8 +164,8 @@ nav ul li a:hover {
     left: 0; /* Menu posicionado à esquerda */
     width: 100%; /* Ocupa toda a largura */
     height: 100vh; /* Ocupa toda a altura */
-    background: rgba(0, 0, 0, 0.9); /* Fundo branco */
-    color: #fff; /* Texto escuro */
+    background: rgba(0, 0, 0, 0.9); /* Fundo escuro com opacidade */
+    color: #fff; /* Texto branco */
     transition: transform 0.3s ease-in-out;
     transform: translateX(-100%); /* Inicialmente fora da tela */
     z-index: 1001; /* Camada superior */
@@ -174,8 +174,8 @@ nav ul li a:hover {
 
 .menu.open {
     transform: translateX(0); /* Entra na tela */
+    background: rgba(255, 255, 255, 1); /* Mude para fundo branco quando aberto */
 }
-
 .menu-content {
     padding: 20px; /* Espaçamento interno */
     background: rgba(255, 255, 255, 1); /* Fundo branco sólido */
