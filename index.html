@@ -271,12 +271,7 @@ nav ul li a:hover {
     closeBtn.addEventListener('click', () => {
         menu.classList.remove('open');
     });
-
-    // Evento para voltar ao menu principal ao clicar no botão de retorno
-    returnBtn.addEventListener('click', () => {
-        menu.classList.remove('open');
-    });
-
+    
     // Carregar o conteúdo de quem-somos.html no menu dinamicamente
     fetch('https://rmadv.github.io/advocacia-previdenci-ria/quem-somos.html')
     .then(response => {
