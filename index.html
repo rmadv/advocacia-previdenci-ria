@@ -252,25 +252,32 @@ nav ul li a:hover {
     </div>
 </header>
 <script>
+   <script>
     // Seleciona os elementos do ícone e do menu
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
     const closeBtn = document.getElementById('close-btn');
     const returnBtn = document.getElementById('return-btn');
+    const menuContent = document.querySelector('.menu-content'); // Agora estamos selecionando corretamente o menuContent
+
+    // Mensagem inicial de erro antes de tentar carregar o conteúdo
     menuContent.innerHTML = '<p>Erro ao carregar o conteúdo. Tente novamente mais tarde.</p>';
 
-// Evento para abrir o menu ao clicar no ícone hambúrguer
-   hamburger.addEventListener('click', () => {
-    menu.classList.add('open');
-});
+    // Evento para abrir o menu ao clicar no ícone hambúrguer
+    hamburger.addEventListener('click', () => {
+        menu.classList.add('open');
+    });
 
-// Evento para fechar o menu ao clicar no botão de fechar
-   closeBtn.addEventListener('click', () => {
-    menu.classList.remove('open');
-});
+    // Evento para fechar o menu ao clicar no botão de fechar
+    closeBtn.addEventListener('click', () => {
+        menu.classList.remove('open');
+    });
+
+    // Evento para voltar ao menu principal ao clicar no botão de retorno
     returnBtn.addEventListener('click', () => {
-    menu.classList.remove('open');
-});
+        menu.classList.remove('open');
+    });
+
     // Carregar o conteúdo de quem-somos.html no menu dinamicamente
     fetch('quem-somos.html')
         .then(response => {
@@ -280,14 +287,13 @@ nav ul li a:hover {
             return response.text();
         })
         .then(html => {
-            menuContent.innerHTML = html; // Insere o conteúdo no menu
+            menuContent.innerHTML = html; // Insere o conteúdo carregado no menu
         })
         .catch(error => {
             menuContent.innerHTML = '<p>Erro ao carregar o conteúdo. Tente novamente mais tarde.</p>';
-            console.error(error);
+            console.error(error); // Exibe o erro no console
         });
 </script>
-
     <nav>
         <ul>
             <li><a href="#previdencia">Previdência</a></li>
