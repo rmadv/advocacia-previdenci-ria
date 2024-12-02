@@ -278,21 +278,22 @@ nav ul li a:hover {
     });
 
     // Carregar o conteúdo de quem-somos.html no menu dinamicamente
-    fetch('quem-somos.html')
-        .then(response => {
-            if (!response.ok) {
-                console.error('Erro ao carregar:', response.statusText);
-                throw new Error('Erro ao carregar o conteúdo.');
-            }
-            return response.text();
-        })
-        .then(html => {
-            menuContent.innerHTML = html; // Insere o conteúdo carregado no menu
-        })
-        .catch(error => {
-            menuContent.innerHTML = '<p>Erro ao carregar o conteúdo. Tente novamente mais tarde.</p>';
-            console.error(error); // Exibe o erro no console
-        });
+    fetch('https://rmadv.github.io/advocacia-previdenci-ria/quem-somos.html')
+    .then(response => {
+        if (!response.ok) {
+            console.error('Erro ao carregar:', response.statusText);
+            throw new Error('Erro ao carregar o conteúdo.');
+        }
+        return response.text();
+    })
+    .then(html => {
+        menuContent.innerHTML = html;  // Insere o conteúdo carregado no menu
+    })
+    .catch(error => {
+        menuContent.innerHTML = '<p>Erro ao carregar o conteúdo. Tente novamente mais tarde.</p>';
+        console.error(error);
+    });
+
 </script>
     <nav>
         <ul>
